@@ -12,6 +12,9 @@ import ProductPage from "./pages/ProductPage";
 import ReviewsPage from "./pages/ReviewsPage";
 import BuyingGuidesPage from "./pages/BuyingGuidesPage";
 import ComparePage from "./pages/ComparePage";
+import DealsPage from "./pages/DealsPage";
+import BlogPage from "./pages/BlogPage";
+import BlogPostPage from "./pages/BlogPostPage";
 
 function Router() {
   return (
@@ -22,6 +25,9 @@ function Router() {
       <Route path="/reviews" component={ReviewsPage} />
       <Route path="/buying-guides" component={BuyingGuidesPage} />
       <Route path="/compare" component={ComparePage} />
+      <Route path="/deals" component={DealsPage} />
+      <Route path="/blog" component={BlogPage} />
+      <Route path="/blog/:slug" component={BlogPostPage} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

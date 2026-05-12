@@ -118,6 +118,12 @@ export default function Navbar() {
             <NavLink href="/buying-guides" active={location === "/buying-guides"}>
               Buying Guides
             </NavLink>
+            <NavLink href="/deals" active={location === "/deals"}>
+              Deals
+            </NavLink>
+            <NavLink href="/blog" active={location === "/blog"}>
+              Blog
+            </NavLink>
             <NavLink href="/compare" active={location === "/compare"}>
               Compare
             </NavLink>
@@ -168,6 +174,8 @@ export default function Navbar() {
               { href: "/category/smart-glasses", label: "Smart Glasses" },
               { href: "/reviews", label: "Reviews" },
               { href: "/buying-guides", label: "Buying Guides" },
+              { href: "/deals", label: "Deals" },
+              { href: "/blog", label: "Blog" },
               { href: "/compare", label: "Compare" },
             ].map((item) => (
               <Link key={item.href} href={item.href}>
