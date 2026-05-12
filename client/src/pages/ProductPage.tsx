@@ -6,7 +6,7 @@
 import { motion } from "framer-motion";
 import { useParams, Link } from "wouter";
 import { Star, Check, X, ExternalLink, ShoppingCart, ArrowLeft, ChevronRight } from "lucide-react";
-import { getProductById, getProductsByCategory } from "@/lib/products";
+import { getProductById, getProductsByCategory, Product } from "@/lib/products";
 import ProductCard from "@/components/ProductCard";
 
 function ScoreBar({ label, value }: { label: string; value: number }) {
@@ -82,7 +82,7 @@ export default function ProductPage() {
     .slice(0, 3);
 
   const overallScore =
-    Object.values(product.score).reduce((a, b) => a + b, 0) /
+    Object.values(product.score).reduce((a: number, b: number) => a + b, 0) /
     Object.values(product.score).length;
 
   return (
@@ -318,7 +318,7 @@ export default function ProductPage() {
                     <Check size={14} /> Pros
                   </h4>
                   <ul className="space-y-2">
-                    {product.pros.map((pro) => (
+                    {product.pros.map((pro: string) => (
                       <li key={pro} className="flex items-start gap-2">
                         <Check
                           size={12}
@@ -349,7 +349,7 @@ export default function ProductPage() {
                     <X size={14} /> Cons
                   </h4>
                   <ul className="space-y-2">
-                    {product.cons.map((con) => (
+                    {product.cons.map((con: string) => (
                       <li key={con} className="flex items-start gap-2">
                         <X
                           size={12}
@@ -385,7 +385,7 @@ export default function ProductPage() {
                   </h3>
                 </div>
                 <div>
-                  {Object.entries(product.specs).map(([key, value], i) => (
+                    {Object.entries(product.specs).map(([key, value], i) => (
                     <div
                       key={key}
                       className="flex items-center px-4 py-3"
@@ -400,12 +400,12 @@ export default function ProductPage() {
                       >
                         {key}
                       </span>
-                      <span
-                        className="text-xs font-medium"
-                        style={{ fontFamily: "'JetBrains Mono', monospace", color: "oklch(0.80 0.01 285)" }}
-                      >
-                        {value}
-                      </span>
+                  <span
+                    className="text-sm font-medium"
+                    style={{ fontFamily: "'JetBrains Mono', monospace", color: "oklch(0.85 0.18 195)" }}
+                  >
+                    {String(value)}
+                  </span>
                     </div>
                   ))}
                 </div>
@@ -440,7 +440,7 @@ export default function ProductPage() {
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {related.map((p) => (
+                {related.map((p: Product) => (
                 <ProductCard key={p.id} product={p} />
               ))}
             </div>
