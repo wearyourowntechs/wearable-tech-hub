@@ -84,7 +84,7 @@ export const products: Product[] = [
     reviewCount: 12847,
     badge: "editors-choice",
     image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B0CHX2F5NB?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B0CHX2F5NB?tag=${AFFILIATE_TAG}`,
     shortDescription: "The thinnest Apple Watch ever with the largest display, advanced health sensors, and all-day battery life.",
     pros: [
       "Thinnest Apple Watch design to date",
@@ -121,7 +121,7 @@ export const products: Product[] = [
     reviewCount: 8234,
     badge: "best-value",
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B0D1YP5ZQH?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B0D1YP5ZQH?tag=${AFFILIATE_TAG}`,
     shortDescription: "Samsung's most advanced health-tracking smartwatch with BioActive sensor and AI-powered insights.",
     pros: [
       "Comprehensive BioActive health sensor",
@@ -157,7 +157,7 @@ export const products: Product[] = [
     reviewCount: 4521,
     badge: "top-rated",
     image: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B0D6BPXHJ5?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B0D6BPXHJ5?tag=${AFFILIATE_TAG}`,
     shortDescription: "The ultimate multisport GPS watch with solar charging, military-grade durability, and 28-day battery life.",
     pros: [
       "Exceptional GPS accuracy",
@@ -193,7 +193,7 @@ export const products: Product[] = [
     reviewCount: 3102,
     badge: "new",
     image: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B0CHMJK9QD?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B0CHMJK9QD?tag=${AFFILIATE_TAG}`,
     shortDescription: "Google's most refined smartwatch with Fitbit health integration, loss of pulse detection, and pure Android experience.",
     pros: [
       "Best-in-class Fitbit health integration",
@@ -228,7 +228,7 @@ export const products: Product[] = [
     reviewCount: 6789,
     badge: "editors-choice",
     image: "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B0CHX3QBCH?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B0CHX3QBCH?tag=${AFFILIATE_TAG}`,
     shortDescription: "Apple's most capable and rugged watch, built for extreme sports and adventures with titanium case and 60-hour battery.",
     pros: [
       "Titanium case — incredibly durable",
@@ -264,7 +264,7 @@ export const products: Product[] = [
     reviewCount: 2341,
     badge: "best-value",
     image: "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B0CQMYXBPJ?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B0CQMYXBPJ?tag=${AFFILIATE_TAG}`,
     shortDescription: "Premium-looking smartwatch with Zepp OS, 14-day battery, and comprehensive health tracking at a mid-range price.",
     pros: [
       "Exceptional 14-day battery life",
@@ -302,7 +302,7 @@ export const products: Product[] = [
     reviewCount: 15432,
     badge: "editors-choice",
     image: "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B0CCQ7DNQL?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B0CCQ7DNQL?tag=${AFFILIATE_TAG}`,
     shortDescription: "Google's best fitness tracker with built-in GPS, ECG, and 7-day battery — the definitive Fitbit experience.",
     pros: [
       "Built-in GPS (no phone needed)",
@@ -337,7 +337,7 @@ export const products: Product[] = [
     reviewCount: 8901,
     badge: "top-rated",
     image: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B0D3XFQFQF?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B0D3XFQFQF?tag=${AFFILIATE_TAG}`,
     shortDescription: "The most advanced recovery and performance tracker, worn 24/7 with no screen for pure biometric focus.",
     pros: [
       "Most detailed recovery & strain analytics",
@@ -372,7 +372,7 @@ export const products: Product[] = [
     reviewCount: 5678,
     badge: "best-value",
     image: "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B09Y4QNHQ8?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B09Y4QNHQ8?tag=${AFFILIATE_TAG}`,
     shortDescription: "Slim, elegant fitness band with Garmin's proven health tracking, Pulse Ox, and up to 7 days battery.",
     pros: [
       "Slim and lightweight design",
@@ -406,7 +406,7 @@ export const products: Product[] = [
     reviewCount: 3201,
     badge: "new",
     image: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B0BT6BQKXP?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B0BT6BQKXP?tag=${AFFILIATE_TAG}`,
     shortDescription: "Medical-grade hybrid smartwatch that looks like a classic timepiece but tracks ECG, SpO2, and sleep apnea.",
     pros: [
       "Classic analog watch aesthetic",
@@ -442,7 +442,7 @@ export const products: Product[] = [
     reviewCount: 9876,
     badge: "editors-choice",
     image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B0CJXR9LZX?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B0CJXR9LZX?tag=${AFFILIATE_TAG}`,
     shortDescription: "The world's most advanced smart ring with 18 sensors, 8-day battery, and the most comprehensive health insights available.",
     pros: [
       "Most accurate sleep tracking available",
@@ -478,7 +478,7 @@ export const products: Product[] = [
     reviewCount: 4532,
     badge: "new",
     image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B0D3J5BXHP?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B0D3J5BXHP?tag=${AFFILIATE_TAG}`,
     shortDescription: "Samsung's first smart ring with no subscription fees, deep Galaxy ecosystem integration, and 7-day battery.",
     pros: [
       "No subscription fee",
@@ -514,7 +514,7 @@ export const products: Product[] = [
     reviewCount: 2109,
     badge: "best-value",
     image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B0CXYZ1234?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B0CXYZ1234?tag=${AFFILIATE_TAG}`,
     shortDescription: "The best budget smart ring with no subscription, 10-day battery, and solid health tracking for the price.",
     pros: [
       "No subscription fee ever",
@@ -551,7 +551,7 @@ export const products: Product[] = [
     reviewCount: 7654,
     badge: "editors-choice",
     image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B0CG7XVMXR?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B0CG7XVMXR?tag=${AFFILIATE_TAG}`,
     shortDescription: "The most popular smart glasses with Meta AI, 12MP camera, open-ear audio, and iconic Wayfarer design.",
     pros: [
       "Iconic Wayfarer design — looks normal",
@@ -588,7 +588,7 @@ export const products: Product[] = [
     reviewCount: 3421,
     badge: "best-value",
     image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&q=80",
-    amazonUrl: `https://www.amazon.com/dp/B09BXQNBPX?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://www.amazon.ca/dp/B09BXQNBPX?tag=${AFFILIATE_TAG}`,
     shortDescription: "Amazon's smart glasses with Alexa built-in, premium audio, and all-day battery for hands-free AI assistance.",
     pros: [
       "Alexa hands-free integration",
