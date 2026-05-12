@@ -424,7 +424,7 @@ export default function ProductPage() {
             color: "oklch(0.50 0.01 285)",
           }}
         >
-          <span style={{ color: "oklch(0.85 0.18 195)", fontWeight: 600 }}>Affiliate Disclosure:</span> The links on this page are Amazon affiliate links. If you purchase through these links, Wear Your Own Tech earns a small commission at no extra cost to you. This helps us continue providing free, unbiased reviews.
+          <span style={{ color: "oklch(0.85 0.18 195)", fontWeight: 600 }}>Affiliate Disclosure:</span> The links on this page are Amazon affiliate links. If you purchase through these links, Wear Your Own Techs earns a small commission at no extra cost to you. This helps us continue providing free, unbiased reviews.
         </div>
 
         {/* Related Products */}

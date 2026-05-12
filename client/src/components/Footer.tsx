@@ -31,7 +31,7 @@ export default function Footer() {
             }}
           >
             <span style={{ color: "oklch(0.85 0.18 195)" }}>Disclosure:</span>{" "}
-            Wear Your Own Tech is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, we earn from qualifying purchases at no extra cost to you.
+            Wear Your Own Techs is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, we earn from qualifying purchases at no extra cost to you.
           </p>
         </div>
       </div>
@@ -54,7 +54,7 @@ export default function Footer() {
                 className="text-lg font-bold"
                 style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.94 0.005 65)" }}
               >
-                Wear Your Own<span style={{ color: "oklch(0.85 0.18 195)" }}>Tech</span>
+                Wear Your Own<span style={{ color: "oklch(0.85 0.18 195)" }}>Techs</span>
               </span>
             </div>
             <p
@@ -185,7 +185,7 @@ export default function Footer() {
               color: "oklch(0.45 0.01 285)",
             }}
           >
-            © 2025 Wear Your Own Tech. All rights reserved.
+            © 2025 Wear Your Own Techs. All rights reserved.
           </p>
           <div className="flex items-center gap-1">
             <a

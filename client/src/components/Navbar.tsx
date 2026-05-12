@@ -61,7 +61,7 @@ export default function Navbar() {
                   className="text-lg font-bold leading-none"
                   style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.85 0.18 195)" }}
                 >
-                  Tech
+                  Techs
                 </span>
               </div>
             </div>
