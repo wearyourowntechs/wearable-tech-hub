@@ -157,7 +157,7 @@ export const products: Product[] = [
     reviewCount: 4521,
     badge: "top-rated",
     image: "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=80",
-    amazonUrl: `https://www.amazon.ca/dp/B0D6BPXHJ5?tag=${AFFILIATE_TAG}`,
+    amazonUrl: `https://amzn.to/4nsg5Of`,
     shortDescription: "The ultimate multisport GPS watch with solar charging, military-grade durability, and 28-day battery life.",
     pros: [
       "Exceptional GPS accuracy",
