@@ -38,7 +38,7 @@ export interface Category {
   productCount: number;
 }
 
-export const AFFILIATE_TAG = "wearabletech-20";
+export const AFFILIATE_TAG = "weyoowte-20";
 
 export const categories: Category[] = [
   {
