@@ -1,0 +1,25 @@
+name = "wearyourowntechs"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+
+[env.production]
+name = "wearyourowntechs-prod"
+route = "wearyourowntechs.com/*"
+zone_id = ""
+
+[build]
+command = "npm run build"
+cwd = "./"
+watch_paths = ["client/src/**/*.tsx", "client/src/**/*.ts"]
+
+[build.upload]
+format = "service-worker"
+
+[triggers.crons]
+# Optional: Add cron triggers if needed
+
+[site]
+bucket = "./dist/public"
