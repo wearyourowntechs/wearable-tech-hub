@@ -27,7 +27,7 @@ const staggerContainer = {
 
 export default function Home() {
   const featured = getFeaturedProducts();
-  const topRated = getTopRatedProducts(4);
+  const topRated = getTopRatedProducts();
 
   return (
     <div className="min-h-screen">
