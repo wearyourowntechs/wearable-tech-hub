@@ -29,7 +29,7 @@ function StarRating({ rating, size = 12 }: { rating: number; size?: number }) {
   );
 }
 
-function Badge({ type }: { type: Product["badge"] }) {
+function Badge({ type }: { type: string }) {
   if (!type) return null;
   const styles: Record<string, { label: string; className: string }> = {
     "editors-choice": { label: "Editor's Choice", className: "badge-editors-choice" },
@@ -109,12 +109,7 @@ export default function ProductCard({ product, variant = "default" }: ProductCar
             alt={product.name}
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
-          {/* Badge overlay */}
-          {product.badge && (
-            <div className="absolute top-3 left-3">
-              <Badge type={product.badge} />
-            </div>
-          )}
+
           {/* Discount badge */}
           {discount && (
             <div
@@ -163,7 +158,7 @@ export default function ProductCard({ product, variant = "default" }: ProductCar
           className="text-sm leading-relaxed mb-3 flex-1"
           style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.65 0.01 285)" }}
         >
-          {product.shortDescription}
+          {product.description}
         </p>
 
         {/* Rating */}

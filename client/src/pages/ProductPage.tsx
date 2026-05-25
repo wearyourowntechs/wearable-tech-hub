@@ -185,25 +185,7 @@ export default function ProductPage() {
                 >
                   {product.brand}
                 </span>
-                {product.badge && (
-                  <span
-                    className={`px-2 py-0.5 rounded text-xs ${
-                      product.badge === "editors-choice" || product.badge === "top-rated"
-                        ? "badge-editors-choice"
-                        : product.badge === "best-value"
-                        ? "badge-best-value"
-                        : "badge-new"
-                    }`}
-                  >
-                    {product.badge === "editors-choice"
-                      ? "Editor's Choice"
-                      : product.badge === "best-value"
-                      ? "Best Value"
-                      : product.badge === "top-rated"
-                      ? "Top Rated"
-                      : "New"}
-                  </span>
-                )}
+
               </div>
 
               <h1
@@ -243,7 +225,7 @@ export default function ProductPage() {
                 className="text-base leading-relaxed mb-6"
                 style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.70 0.01 285)" }}
               >
-                {product.shortDescription}
+                {product.description}
               </p>
 
               {/* Price + CTA */}

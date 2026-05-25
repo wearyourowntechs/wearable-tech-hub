@@ -22,9 +22,7 @@ export default function CategoryPage() {
   let products = getProductsByCategory(categoryId);
 
   // Filter
-  if (filterBadge !== "all") {
-    products = products.filter((p) => p.badge === filterBadge);
-  }
+  // Badge filter removed - not available in current product data
 
   // Sort
   products = [...products].sort((a, b) => {

@@ -503,7 +503,7 @@ export default function Home() {
                           className="text-xs leading-relaxed line-clamp-1"
                           style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.55 0.01 285)" }}
                         >
-                          {product.shortDescription}
+                          {product.description}
                         </p>
                         <a
                           href={product.amazonUrl}
