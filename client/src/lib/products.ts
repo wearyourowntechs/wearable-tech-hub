@@ -1,5 +1,5 @@
 // Product Database - All 57 products from amazon.ca with affiliate links
-// Updated with accurate pricing and category-appropriate images
+// Updated with accurate pricing and category-specific images
 // =============================================================
 
 export interface Product {
@@ -30,6 +30,20 @@ export interface Category {
 
 const AFFILIATE_TAG = "weyoowte-20";
 
+// Category-specific image URLs from Unsplash
+const CATEGORY_IMAGES = {
+  smartwatches: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=800&fit=crop",
+  "fitness-trackers": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=800&h=800&fit=crop",
+  "smart-rings": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=800&fit=crop",
+  "smart-glasses": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&h=800&fit=crop",
+  "vr-headsets": "https://images.unsplash.com/photo-1617638924702-92f37fcb18ad?w=800&h=800&fit=crop",
+  "kids-wearables": "https://images.unsplash.com/photo-1503454537688-e6c8ff1d9c89?w=800&h=800&fit=crop",
+  "pet-tech": "https://images.unsplash.com/photo-1587300411107-ec48553489af?w=800&h=800&fit=crop",
+  "bluetooth-headsets": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=800&fit=crop",
+  "wearable-jewelry": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&h=800&fit=crop",
+  "bluetooth-hats": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=800&fit=crop",
+};
+
 export const products: Product[] = [
   // ═══════════════════════════════════════════════════════════════════════
   // SMART WATCHES (7 products)
@@ -43,7 +57,7 @@ export const products: Product[] = [
     originalPrice: 449,
     rating: 4.6,
     reviewCount: 2841,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES.smartwatches,
     amazonUrl: "https://amzn.to/4e0uuxW",
     description: "Premium Google smartwatch with Wear OS 4, health tracking, and seamless Android integration.",
     specs: {
@@ -66,7 +80,7 @@ export const products: Product[] = [
     originalPrice: 399,
     rating: 4.7,
     reviewCount: 3156,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES.smartwatches,
     amazonUrl: "https://amzn.to/4f3cUdL",
     description: "Versatile fitness smartwatch with AMOLED display, multi-GNSS, and 11-day battery life.",
     specs: {
@@ -89,7 +103,7 @@ export const products: Product[] = [
     originalPrice: 299,
     rating: 4.5,
     reviewCount: 4521,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES.smartwatches,
     amazonUrl: "https://amzn.to/4eXjB10",
     description: "Affordable Apple Watch with essential fitness tracking, health features, and watchOS integration.",
     specs: {
@@ -112,7 +126,7 @@ export const products: Product[] = [
     originalPrice: 249,
     rating: 4.4,
     reviewCount: 1823,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES.smartwatches,
     amazonUrl: "https://amzn.to/4tPE8YW",
     description: "Stylish smartwatch with stress monitoring, sleep tracking, and 14-day battery life.",
     specs: {
@@ -135,7 +149,7 @@ export const products: Product[] = [
     originalPrice: 449,
     rating: 4.7,
     reviewCount: 892,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES.smartwatches,
     amazonUrl: "https://amzn.to/4dKFjTP",
     description: "Premium sports watch with dual-frequency GPS, advanced training metrics, and 21-day battery.",
     specs: {
@@ -158,7 +172,7 @@ export const products: Product[] = [
     originalPrice: 379,
     rating: 4.5,
     reviewCount: 1456,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES.smartwatches,
     amazonUrl: "https://amzn.to/49ijwkZ",
     description: "Premium HUAWEI smartwatch with AMOLED display, comprehensive health monitoring, and 14-day battery.",
     specs: {
@@ -181,7 +195,7 @@ export const products: Product[] = [
     originalPrice: 499,
     rating: 4.6,
     reviewCount: 1123,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES.smartwatches,
     amazonUrl: "https://amzn.to/4nPGx4O",
     description: "Flagship HUAWEI smartwatch with titanium case, sapphire crystal, and advanced health features.",
     specs: {
@@ -208,7 +222,7 @@ export const products: Product[] = [
     originalPrice: 349,
     rating: 4.7,
     reviewCount: 2134,
-    image: "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["fitness-trackers"],
     amazonUrl: "https://amzn.to/3PWZBBq",
     description: "Rugged outdoor sports watch with multi-GNSS, solar charging, and 14-day battery life.",
     specs: {
@@ -231,7 +245,7 @@ export const products: Product[] = [
     originalPrice: 249,
     rating: 4.4,
     reviewCount: 1876,
-    image: "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["fitness-trackers"],
     amazonUrl: "https://amzn.to/4uuVdZB",
     description: "Subscription-based fitness tracker focused on recovery, strain, and sleep metrics.",
     specs: {
@@ -254,7 +268,7 @@ export const products: Product[] = [
     originalPrice: 499,
     rating: 4.7,
     reviewCount: 5234,
-    image: "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["fitness-trackers"],
     amazonUrl: "https://amzn.to/4f2SIZI",
     description: "Latest Apple Watch with advanced health features, larger display, and improved performance.",
     specs: {
@@ -277,7 +291,7 @@ export const products: Product[] = [
     originalPrice: 329,
     rating: 4.6,
     reviewCount: 1654,
-    image: "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["fitness-trackers"],
     amazonUrl: "https://amzn.to/4uaDQMN",
     description: "Rugged sports watch with dual-frequency GPS, 21-day battery, and military-grade durability.",
     specs: {
@@ -300,7 +314,7 @@ export const products: Product[] = [
     originalPrice: 429,
     rating: 4.6,
     reviewCount: 1923,
-    image: "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["fitness-trackers"],
     amazonUrl: "https://amzn.to/49Bmpxt",
     description: "Stylish fitness watch with AMOLED display, advanced training metrics, and 11-day battery.",
     specs: {
@@ -323,7 +337,7 @@ export const products: Product[] = [
     originalPrice: 899,
     rating: 4.7,
     reviewCount: 2341,
-    image: "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["fitness-trackers"],
     amazonUrl: "https://amzn.to/3PD8PCE",
     description: "Premium sports watch with titanium case, Action button, and extreme durability.",
     specs: {
@@ -350,7 +364,7 @@ export const products: Product[] = [
     originalPrice: 349,
     rating: 4.6,
     reviewCount: 2156,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["smart-rings"],
     amazonUrl: "https://amzn.to/4uuVP1l",
     description: "Premium smart ring with advanced sleep and recovery tracking, titanium design.",
     specs: {
@@ -373,7 +387,7 @@ export const products: Product[] = [
     originalPrice: 399,
     rating: 4.5,
     reviewCount: 1834,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["smart-rings"],
     amazonUrl: "https://amzn.to/4dry0Bx",
     description: "Samsung's smart ring with health tracking, AI coaching, and 3-day battery life.",
     specs: {
@@ -396,7 +410,7 @@ export const products: Product[] = [
     originalPrice: 249,
     rating: 4.3,
     reviewCount: 987,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["smart-rings"],
     amazonUrl: "https://amzn.to/4dKI3R7",
     description: "Affordable smart ring with metabolic and sleep tracking, lightweight design.",
     specs: {
@@ -419,7 +433,7 @@ export const products: Product[] = [
     originalPrice: 229,
     rating: 4.2,
     reviewCount: 654,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["smart-rings"],
     amazonUrl: "https://amzn.to/4dKI3R7",
     description: "Budget-friendly smart ring with basic health tracking and 5-day battery.",
     specs: {
@@ -446,7 +460,7 @@ export const products: Product[] = [
     originalPrice: 349,
     rating: 4.5,
     reviewCount: 2341,
-    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["smart-glasses"],
     amazonUrl: "https://amzn.to/3PgrKTW",
     description: "Stylish smart glasses with built-in camera, audio, and AI features.",
     specs: {
@@ -469,7 +483,7 @@ export const products: Product[] = [
     originalPrice: 699,
     rating: 4.4,
     reviewCount: 876,
-    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["smart-glasses"],
     amazonUrl: "https://amzn.to/4vayxhf",
     description: "Lightweight XR glasses for gaming and media consumption with 120Hz display.",
     specs: {
@@ -492,7 +506,7 @@ export const products: Product[] = [
     originalPrice: 199,
     rating: 3.8,
     reviewCount: 543,
-    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["smart-glasses"],
     amazonUrl: "https://amzn.to/49jyIhH",
     description: "Budget sports glasses with basic HUD display for fitness tracking.",
     specs: {
@@ -515,7 +529,7 @@ export const products: Product[] = [
     originalPrice: 499,
     rating: 4.3,
     reviewCount: 1123,
-    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["smart-glasses"],
     amazonUrl: "https://amzn.to/3RCeqd5",
     description: "Premium sports glasses with integrated audio and fitness tracking.",
     specs: {
@@ -538,7 +552,7 @@ export const products: Product[] = [
     originalPrice: 429,
     rating: 4.4,
     reviewCount: 987,
-    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["smart-glasses"],
     amazonUrl: "https://amzn.to/4fBh50v",
     description: "Oakley-designed Meta smart glasses with premium materials and styling.",
     specs: {
@@ -561,7 +575,7 @@ export const products: Product[] = [
     originalPrice: 249,
     rating: 3.7,
     reviewCount: 456,
-    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["smart-glasses"],
     amazonUrl: "https://amzn.to/4dBhGN9",
     description: "Budget smart glasses with built-in camera and basic display.",
     specs: {
@@ -588,7 +602,7 @@ export const products: Product[] = [
     originalPrice: 749,
     rating: 4.6,
     reviewCount: 3456,
-    image: "https://images.unsplash.com/photo-1617638924702-92f37fcb18ad?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["vr-headsets"],
     amazonUrl: "https://amzn.to/42LXfs5",
     description: "Premium VR headset with 4K display, color passthrough, and extensive game library.",
     specs: {
@@ -611,7 +625,7 @@ export const products: Product[] = [
     originalPrice: 899,
     rating: 4.4,
     reviewCount: 654,
-    image: "https://images.unsplash.com/photo-1617638924702-92f37fcb18ad?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["vr-headsets"],
     amazonUrl: "https://amzn.to/4tSuS6v",
     description: "High-end VR headset with 200° FOV, 4K display, and advanced controllers.",
     specs: {
@@ -634,7 +648,7 @@ export const products: Product[] = [
     originalPrice: 1499,
     rating: 4.5,
     reviewCount: 432,
-    image: "https://images.unsplash.com/photo-1617638924702-92f37fcb18ad?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["vr-headsets"],
     amazonUrl: "https://amzn.to/4wQNHKe",
     description: "Premium VR headset with 8K display, 200° FOV, and professional-grade features.",
     specs: {
@@ -657,7 +671,7 @@ export const products: Product[] = [
     originalPrice: 2199,
     rating: 4.3,
     reviewCount: 234,
-    image: "https://images.unsplash.com/photo-1617638924702-92f37fcb18ad?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["vr-headsets"],
     amazonUrl: "https://amzn.to/4dZp5at",
     description: "Enterprise-grade VR headset with eye tracking, hand tracking, and professional applications.",
     specs: {
@@ -680,7 +694,7 @@ export const products: Product[] = [
     originalPrice: 149,
     rating: 3.2,
     reviewCount: 234,
-    image: "https://images.unsplash.com/photo-1617638924702-92f37fcb18ad?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["vr-headsets"],
     amazonUrl: "https://amzn.to/4nFtW3O",
     description: "Budget VR headset for smartphone-based virtual reality experiences.",
     specs: {
@@ -703,7 +717,7 @@ export const products: Product[] = [
     originalPrice: 549,
     rating: 4.1,
     reviewCount: 567,
-    image: "https://images.unsplash.com/photo-1617638924702-92f37fcb18ad?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["vr-headsets"],
     amazonUrl: "https://amzn.to/4nMoCvG",
     description: "Mid-range VR headset with 5K display and comfortable design.",
     specs: {
@@ -730,7 +744,7 @@ export const products: Product[] = [
     originalPrice: 179,
     rating: 4.4,
     reviewCount: 1234,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["kids-wearables"],
     amazonUrl: "https://amzn.to/4uCxs1F",
     description: "Kids GPS smartwatch with 4G connectivity, calling, and location tracking.",
     specs: {
@@ -753,7 +767,7 @@ export const products: Product[] = [
     originalPrice: 129,
     rating: 4.2,
     reviewCount: 876,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["kids-wearables"],
     amazonUrl: "https://amzn.to/43qGv9U",
     description: "Fun kids smartwatch with games, emoji, and basic fitness tracking.",
     specs: {
@@ -776,7 +790,7 @@ export const products: Product[] = [
     originalPrice: 99,
     rating: 4.3,
     reviewCount: 1543,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["kids-wearables"],
     amazonUrl: "https://amzn.to/4v8H8Ru",
     description: "Educational kids smartwatch with games, camera, and bilingual support.",
     specs: {
@@ -799,7 +813,7 @@ export const products: Product[] = [
     originalPrice: 79,
     rating: 3.9,
     reviewCount: 654,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["kids-wearables"],
     amazonUrl: "https://amzn.to/4tQUYqy",
     description: "Compact body camera for kids with 32GB storage and HD recording.",
     specs: {
@@ -822,7 +836,7 @@ export const products: Product[] = [
     originalPrice: 99,
     rating: 4.1,
     reviewCount: 543,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["kids-wearables"],
     amazonUrl: "https://amzn.to/4tXizpz",
     description: "Licensed JoJo Siwa kids smartwatch with games and fun features.",
     specs: {
@@ -845,7 +859,7 @@ export const products: Product[] = [
     originalPrice: 99,
     rating: 4.2,
     reviewCount: 678,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["kids-wearables"],
     amazonUrl: "https://amzn.to/4wLJK9t",
     description: "Licensed Harry Potter kids smartwatch with magical themes and games.",
     specs: {
@@ -872,7 +886,7 @@ export const products: Product[] = [
     originalPrice: 149,
     rating: 4.5,
     reviewCount: 2134,
-    image: "https://images.unsplash.com/photo-1587300411107-ec48553489af?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["pet-tech"],
     amazonUrl: "https://amzn.to/4dZpQQR",
     description: "Lightweight GPS tracker for pets with real-time location and activity monitoring.",
     specs: {
@@ -895,7 +909,7 @@ export const products: Product[] = [
     originalPrice: 249,
     rating: 4.2,
     reviewCount: 876,
-    image: "https://images.unsplash.com/photo-1587300411107-ec48553489af?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["pet-tech"],
     amazonUrl: "https://amzn.to/4uXXUT8",
     description: "Wireless pet containment system with adjustable boundary and receiver collar.",
     specs: {
@@ -918,7 +932,7 @@ export const products: Product[] = [
     originalPrice: 329,
     rating: 4.4,
     reviewCount: 654,
-    image: "https://images.unsplash.com/photo-1587300411107-ec48553489af?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["pet-tech"],
     amazonUrl: "https://amzn.to/4tSwa1l",
     description: "Advanced pet camera with night vision, two-way audio, and activity alerts.",
     specs: {
@@ -941,7 +955,7 @@ export const products: Product[] = [
     originalPrice: 79,
     rating: 3.8,
     reviewCount: 432,
-    image: "https://images.unsplash.com/photo-1587300411107-ec48553489af?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["pet-tech"],
     amazonUrl: "https://amzn.to/4nLGFSO",
     description: "Budget pet tracker with basic GPS and activity monitoring.",
     specs: {
@@ -964,7 +978,7 @@ export const products: Product[] = [
     originalPrice: 59,
     rating: 3.9,
     reviewCount: 234,
-    image: "https://images.unsplash.com/photo-1587300411107-ec48553489af?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["pet-tech"],
     amazonUrl: "https://amzn.to/49YOPkP",
     description: "Smart pet mat with temperature control and health monitoring.",
     specs: {
@@ -987,7 +1001,7 @@ export const products: Product[] = [
     originalPrice: 199,
     rating: 4.1,
     reviewCount: 543,
-    image: "https://images.unsplash.com/photo-1587300411107-ec48553489af?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["pet-tech"],
     amazonUrl: "https://amzn.to/4wJUV2f",
     description: "Smart patio pet door with microchip recognition and app control.",
     specs: {
@@ -1014,7 +1028,7 @@ export const products: Product[] = [
     originalPrice: 179,
     rating: 4.5,
     reviewCount: 1234,
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["bluetooth-headsets"],
     amazonUrl: "https://amzn.to/43aDhrf",
     description: "Gaming-focused earbuds with low latency, active noise cancellation, and RGB lighting.",
     specs: {
@@ -1037,7 +1051,7 @@ export const products: Product[] = [
     originalPrice: 249,
     rating: 4.6,
     reviewCount: 876,
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["bluetooth-headsets"],
     amazonUrl: "https://amzn.to/4uqXvsq",
     description: "Premium business headset with excellent call quality and 13-hour battery.",
     specs: {
@@ -1060,7 +1074,7 @@ export const products: Product[] = [
     originalPrice: 399,
     rating: 4.7,
     reviewCount: 654,
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["bluetooth-headsets"],
     amazonUrl: "https://amzn.to/4nHgi02",
     description: "Premium audio earbuds with exceptional sound quality and active noise cancellation.",
     specs: {
@@ -1083,7 +1097,7 @@ export const products: Product[] = [
     originalPrice: 199,
     rating: 4.4,
     reviewCount: 543,
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["bluetooth-headsets"],
     amazonUrl: "https://amzn.to/4dKvCoj",
     description: "High-quality audio earbuds with LDAC support and planar drivers.",
     specs: {
@@ -1106,7 +1120,7 @@ export const products: Product[] = [
     originalPrice: 349,
     rating: 4.8,
     reviewCount: 2341,
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["bluetooth-headsets"],
     amazonUrl: "https://amzn.to/4tMdsbD",
     description: "Best-in-class noise cancelling earbuds with exceptional sound quality.",
     specs: {
@@ -1129,7 +1143,7 @@ export const products: Product[] = [
     originalPrice: 59,
     rating: 4.0,
     reviewCount: 432,
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["bluetooth-headsets"],
     amazonUrl: "https://amzn.to/4v1MzBv",
     description: "Comfortable sleep headphones with soft headband and wireless connectivity.",
     specs: {
@@ -1156,7 +1170,7 @@ export const products: Product[] = [
     originalPrice: 249,
     rating: 4.3,
     reviewCount: 654,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["wearable-jewelry"],
     amazonUrl: "https://amzn.to/43qBrlS",
     description: "Cryptocurrency hardware wallet ring with NFC technology.",
     specs: {
@@ -1179,7 +1193,7 @@ export const products: Product[] = [
     originalPrice: 129,
     rating: 3.9,
     reviewCount: 234,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["wearable-jewelry"],
     amazonUrl: "https://amzn.to/4dCyGTk",
     description: "Kids smart jewelry with basic tracking and communication features.",
     specs: {
@@ -1202,7 +1216,7 @@ export const products: Product[] = [
     originalPrice: 49,
     rating: 4.1,
     reviewCount: 123,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["wearable-jewelry"],
     amazonUrl: "https://amzn.to/4wLLvU7",
     description: "Elegant pearl smartwatch band compatible with most smartwatches.",
     specs: {
@@ -1225,7 +1239,7 @@ export const products: Product[] = [
     originalPrice: 129,
     rating: 4.0,
     reviewCount: 234,
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["wearable-jewelry"],
     amazonUrl: "https://amzn.to/4uvtCYe",
     description: "Stylish enamel-coated smart ring with basic health tracking.",
     specs: {
@@ -1252,7 +1266,7 @@ export const products: Product[] = [
     originalPrice: 129,
     rating: 4.2,
     reviewCount: 654,
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["bluetooth-hats"],
     amazonUrl: "https://amzn.to/3PTfuc6",
     description: "Wireless Bluetooth speakers for helmets with excellent sound quality.",
     specs: {
@@ -1275,7 +1289,7 @@ export const products: Product[] = [
     originalPrice: 79,
     rating: 3.8,
     reviewCount: 432,
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["bluetooth-hats"],
     amazonUrl: "https://amzn.to/4tRPqfk",
     description: "Casual sunhat with integrated Bluetooth speakers for outdoor activities.",
     specs: {
@@ -1298,7 +1312,7 @@ export const products: Product[] = [
     originalPrice: 59,
     rating: 3.9,
     reviewCount: 234,
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["bluetooth-hats"],
     amazonUrl: "https://amzn.to/4tRPtI2",
     description: "Customizable beanie with removable Bluetooth speaker module.",
     specs: {
@@ -1321,7 +1335,7 @@ export const products: Product[] = [
     originalPrice: 54,
     rating: 3.7,
     reviewCount: 123,
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["bluetooth-hats"],
     amazonUrl: "https://amzn.to/4dqFSDh",
     description: "Classic knitted beanie with integrated wireless charging and Bluetooth.",
     specs: {
@@ -1344,7 +1358,7 @@ export const products: Product[] = [
     originalPrice: 64,
     rating: 3.8,
     reviewCount: 234,
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["bluetooth-hats"],
     amazonUrl: "https://amzn.to/4nFyxTC",
     description: "Fashion-forward hat with subtle Bluetooth speaker integration.",
     specs: {
@@ -1367,7 +1381,7 @@ export const products: Product[] = [
     originalPrice: 129,
     rating: 4.1,
     reviewCount: 345,
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["bluetooth-hats"],
     amazonUrl: "https://amzn.to/4fCiRP4",
     description: "Professional hard hat with integrated Bluetooth for job site communication.",
     specs: {
@@ -1388,70 +1402,70 @@ export const categories: Category[] = [
     id: "smartwatches",
     name: "Smart Watches",
     description: "Premium smartwatches with health tracking, fitness features, and smart notifications.",
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES.smartwatches,
     productCount: 7
   },
   {
     id: "fitness-trackers",
     name: "Sport Activity Trackers",
     description: "Advanced fitness trackers for serious athletes and outdoor enthusiasts.",
-    image: "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["fitness-trackers"],
     productCount: 6
   },
   {
     id: "smart-rings",
     name: "Smart Rings",
     description: "Elegant smart rings for health monitoring and discrete wearable technology.",
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["smart-rings"],
     productCount: 4
   },
   {
     id: "smart-glasses",
     name: "Smart Glasses",
     description: "Next-generation smart glasses with AR capabilities and integrated displays.",
-    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["smart-glasses"],
     productCount: 6
   },
   {
     id: "vr-headsets",
     name: "Cell Phone Virtual Reality",
     description: "Immersive VR headsets for gaming, entertainment, and professional applications.",
-    image: "https://images.unsplash.com/photo-1617638924702-92f37fcb18ad?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["vr-headsets"],
     productCount: 6
   },
   {
     id: "kids-wearables",
     name: "Wearable Tech for Kids",
     description: "Fun and educational wearable devices designed specifically for children.",
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["kids-wearables"],
     productCount: 6
   },
   {
     id: "pet-tech",
     name: "Tech for your Pets",
     description: "Smart devices to keep your pets safe, healthy, and connected.",
-    image: "https://images.unsplash.com/photo-1587300411107-ec48553489af?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["pet-tech"],
     productCount: 6
   },
   {
     id: "bluetooth-headsets",
     name: "Cell Phone Bluetooth Headsets",
     description: "Premium wireless earbuds and headsets for audio enthusiasts.",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["bluetooth-headsets"],
     productCount: 6
   },
   {
     id: "wearable-jewelry",
     name: "Wearable Tech Jewlery",
     description: "Stylish wearable technology that doubles as elegant jewelry.",
-    image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["wearable-jewelry"],
     productCount: 4
   },
   {
     id: "bluetooth-hats",
     name: "Blue Tooth Capable Hats & Caps",
     description: "Innovative hats and caps with integrated Bluetooth speakers.",
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop",
+    image: CATEGORY_IMAGES["bluetooth-hats"],
     productCount: 6
   }
 ];
