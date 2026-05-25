@@ -7,9 +7,22 @@ import { motion } from "framer-motion";
 import { ArrowRight, Zap, Shield, Star, TrendingUp, ChevronRight, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 import ProductCard from "@/components/ProductCard";
-import { getFeaturedProducts, getTopRatedProducts, categories } from "@/lib/products";
+import { getTopRatedProducts, categories, getProductsByCategory } from "@/lib/products";
 
 const HERO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663651644589/cNZFBcai4VvVZ9Us6eXbuZ/hero-banner-V4mk7MRe5dx89YicUH5c2h.webp";
+
+const CATEGORY_IMAGES: Record<string, string> = {
+  smartwatches: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=800&fit=crop",
+  "fitness-trackers": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=800&h=800&fit=crop",
+  "smart-rings": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=800&fit=crop",
+  "smart-glasses": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&h=800&fit=crop",
+  "vr-headsets": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&h=800&fit=croph=800https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&h=800&fit=cropfit=crop",
+  "kids-wearables": "https://images.unsplash.com/photo-1587300411107-ec48553489af?w=800https://images.unsplash.com/photo-1552053831-71594a27c62d?w=800&h=800&fit=croph=800https://images.unsplash.com/photo-1552053831-71594a27c62d?w=800&h=800&fit=cropfit=crop",
+  "pet-tech": "https://images.unsplash.com/photo-1587300411107-ec48553489af?w=800https://images.unsplash.com/photo-1552053831-71594a27c62d?w=800&h=800&fit=croph=800https://images.unsplash.com/photo-1552053831-71594a27c62d?w=800&h=800&fit=cropfit=crop",
+  "bluetooth-headsets": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=800&fit=crop",
+  "wearable-jewelry": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&h=800&fit=crop",
+  "bluetooth-hats": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=800&fit=crop",
+};
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -26,7 +39,7 @@ const staggerContainer = {
 };
 
 export default function Home() {
-  const featured = getFeaturedProducts();
+  const featured = getTopRatedProducts(8);
   const topRated = getTopRatedProducts();
 
   return (
@@ -306,7 +319,7 @@ export default function Home() {
             </motion.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-              {featured.map((product, i) => (
+              {featured.map((product: any, i: any) => (
                 <motion.div key={product.id} variants={fadeUp} custom={i + 1}>
                   <ProductCard product={product} />
                 </motion.div>
@@ -347,16 +360,16 @@ export default function Home() {
             </motion.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-              {categories.map((cat, i) => (
-                <motion.div key={cat.id} variants={fadeUp} custom={i + 1}>
-                  <Link href={`/category/${cat.id}`}>
+              {categories.map((category: any, i: any) => (
+                <motion.div key={category.id} variants={fadeUp} custom={i + 1}>
+                  <Link href={`/category/${category.id}`}>
                     <div
                       className="card-hover relative overflow-hidden rounded-xl aspect-[4/3] group cursor-pointer"
                       style={{ border: "1px solid oklch(0.22 0.008 265)" }}
                     >
                       <img
-                        src={cat.image}
-                        alt={cat.name}
+                        src={CATEGORY_IMAGES[category.id as keyof typeof CATEGORY_IMAGES]}
+                        alt={category.name}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div
@@ -371,13 +384,13 @@ export default function Home() {
                           className="text-lg font-bold mb-1"
                           style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.94 0.005 65)" }}
                         >
-                          {cat.name}
+                          {category.name}
                         </h3>
                         <p
                           className="text-xs mb-2"
                           style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.65 0.01 285)" }}
                         >
-                          {cat.description}
+                          {category.description}
                         </p>
                         <div className="flex items-center justify-between">
                           <span
@@ -387,7 +400,7 @@ export default function Home() {
                               color: "oklch(0.85 0.18 195)",
                             }}
                           >
-                            {cat.productCount} products
+                            {category.productCount} products
                           </span>
                           <ArrowRight
                             size={14}

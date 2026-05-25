@@ -10,6 +10,19 @@ import { SlidersHorizontal, ArrowUpDown } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { getProductsByCategory, categories } from "@/lib/products";
 
+const CATEGORY_IMAGES: Record<string, string> = {
+  smartwatches: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=800&fit=crop",
+  "fitness-trackers": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=800&h=800&fit=crop",
+  "smart-rings": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=800&fit=crop",
+  "smart-glasses": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&h=800&fit=crop",
+  "vr-headsets": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&h=800&fit=croph=800https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&h=800&fit=cropfit=crop",
+  "kids-wearables": "https://images.unsplash.com/photo-1587300411107-ec48553489af?w=800https://images.unsplash.com/photo-1552053831-71594a27c62d?w=800&h=800&fit=croph=800https://images.unsplash.com/photo-1552053831-71594a27c62d?w=800&h=800&fit=cropfit=crop",
+  "pet-tech": "https://images.unsplash.com/photo-1587300411107-ec48553489af?w=800https://images.unsplash.com/photo-1552053831-71594a27c62d?w=800&h=800&fit=croph=800https://images.unsplash.com/photo-1552053831-71594a27c62d?w=800&h=800&fit=cropfit=crop",
+  "bluetooth-headsets": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=800&fit=crop",
+  "wearable-jewelry": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&h=800&fit=crop",
+  "bluetooth-hats": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=800&fit=crop",
+};
+
 type SortOption = "rating" | "price-asc" | "price-desc" | "reviews";
 
 export default function CategoryPage() {
@@ -51,8 +64,8 @@ export default function CategoryPage() {
         style={{ borderBottom: "1px solid oklch(0.20 0.008 265)" }}
       >
         <img
-          src={category.image}
-          alt={category.name}
+          src={CATEGORY_IMAGES[categoryId as keyof typeof CATEGORY_IMAGES]}
+          alt={category?.name}
           className="w-full h-full object-cover"
         />
         <div
