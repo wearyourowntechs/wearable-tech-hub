@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Zap, Search, ChevronDown } from "lucide-react";
+import { Menu, X, Search, ChevronDown } from "lucide-react";
 import { categories } from "@/lib/products";
 
 export default function Navbar() {
@@ -36,35 +36,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center gap-2 group">
-              <div
-                className="w-8 h-8 rounded flex items-center justify-center"
-                style={{
-                  background: "oklch(0.85 0.18 195 / 0.15)",
-                  border: "1px solid oklch(0.85 0.18 195 / 0.4)",
-                }}
-              >
-                <Zap
-                  size={16}
-                  style={{ color: "oklch(0.85 0.18 195)" }}
-                  className="group-hover:scale-110 transition-transform"
-                />
-              </div>
-              <div>
-                <span
-                  className="text-lg font-bold leading-none"
-                  style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.94 0.005 65)" }}
-                >
-                  Wear Your Own
-                </span>
-                <span
-                  className="text-lg font-bold leading-none"
-                  style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.85 0.18 195)" }}
-                >
-                  Techs
-                </span>
-              </div>
-            </div>
+            <img
+              src="/manus-storage/wyot-logo-250-128x128_3e67960c.png"
+              alt="Wear Your Own Techs"
+              className="h-12 w-auto group-hover:opacity-80 transition-opacity"
+            />
           </Link>
 
           {/* Desktop Nav */}
