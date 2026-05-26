@@ -17,6 +17,7 @@ import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import CategoryLandingPage from "./pages/CategoryLandingPage";
 import SEOReviewsPage from "./pages/SEOReviewsPage";
+import ReviewDetailPage from "./pages/ReviewDetailPage";
 
 function Router() {
   return (
@@ -32,6 +33,7 @@ function Router() {
       <Route path="/blog/:slug" component={BlogPostPage} />
       <Route path="/category-landing/:id" component={CategoryLandingPage} />
       <Route path="/seo-reviews" component={SEOReviewsPage} />
+      <Route path="/review/:slug" component={ReviewDetailPage} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

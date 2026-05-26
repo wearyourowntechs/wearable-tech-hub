@@ -38,7 +38,7 @@ export default function SEOReviewsPage() {
           <div className="grid gap-8">
             {filteredReviews.map((review) => (
               <Link key={review.id} href={`/review/${review.slug}`}>
-                <a className="group block">
+                <div className="group block cursor-pointer">
                   <div className="bg-card hover:bg-accent/50 border border-border rounded-lg p-6 md:p-8 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
                     {/* Header */}
                     <div className="flex items-start justify-between gap-4 mb-4">
@@ -83,7 +83,7 @@ export default function SEOReviewsPage() {
                       )}
                     </div>
                   </div>
-                </a>
+                </div>
               </Link>
             ))}
           </div>
