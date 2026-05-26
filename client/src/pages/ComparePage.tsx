@@ -1,6 +1,6 @@
 // =============================================================
 // COMPARE PAGE — Dark Precision design
-// Side-by-side product comparison tool
+// Side-by-side product comparison tool with filters
 // =============================================================
 
 import { useState } from "react";
@@ -15,10 +15,18 @@ export default function ComparePage() {
   const [selected, setSelected] = useState<Product[]>([]);
   const [search, setSearch] = useState("");
   const [showPicker, setShowPicker] = useState(false);
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(5000);
+  const [minRating, setMinRating] = useState(0);
+
+  const maxPriceInProducts = Math.max(...products.map((p) => p.price), 5000);
 
   const filtered = products.filter(
     (p) =>
       !selected.find((s) => s.id === p.id) &&
+      p.price >= minPrice &&
+      p.price <= maxPrice &&
+      p.rating >= minRating &&
       (p.name.toLowerCase().includes(search.toLowerCase()) ||
         p.brand.toLowerCase().includes(search.toLowerCase()) ||
         p.category.toLowerCase().includes(search.toLowerCase()))
@@ -36,9 +44,13 @@ export default function ComparePage() {
     setSelected(selected.filter((p) => p.id !== id));
   };
 
-  const allSpecs = selected.length > 0
-    ? Object.keys(selected[0].specs)
-    : [];
+  const resetFilters = () => {
+    setMinPrice(0);
+    setMaxPrice(maxPriceInProducts);
+    setMinRating(0);
+  };
+
+  const allSpecs = selected.length > 0 ? Object.keys(selected[0].specs) : [];
 
   return (
     <div className="min-h-screen pt-16">
@@ -179,7 +191,7 @@ export default function ComparePage() {
             <motion.div
               initial={{ scale: 0.95, y: 20 }}
               animate={{ scale: 1, y: 0 }}
-              className="w-full max-w-lg rounded-2xl overflow-hidden"
+              className="w-full max-w-2xl rounded-2xl overflow-hidden max-h-[90vh] flex flex-col"
               style={{
                 background: "oklch(0.15 0.008 265)",
                 border: "1px solid oklch(0.25 0.008 265)",
@@ -200,22 +212,106 @@ export default function ComparePage() {
                   <X size={18} style={{ color: "oklch(0.55 0.01 285)" }} />
                 </button>
               </div>
-              <div className="p-4">
-                <input
-                  type="text"
-                  placeholder="Search products..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg text-sm outline-none mb-3"
+
+              {/* Filters Section */}
+              <div className="p-4 border-b" style={{ borderColor: "oklch(0.22 0.008 265)" }}>
+                <h4
+                  className="text-sm font-semibold mb-3"
+                  style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.75 0.01 285)" }}
+                >
+                  Filter Products
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {/* Search */}
+                  <input
+                    type="text"
+                    placeholder="Search products..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    className="px-3 py-2 rounded-lg text-sm outline-none"
+                    style={{
+                      background: "oklch(0.19 0.008 265)",
+                      border: "1px solid oklch(0.25 0.008 265)",
+                      color: "oklch(0.94 0.005 65)",
+                      fontFamily: "'DM Sans', sans-serif",
+                    }}
+                  />
+
+                  {/* Price Range */}
+                  <div>
+                    <label
+                      className="text-xs font-semibold mb-2 block"
+                      style={{ color: "oklch(0.75 0.01 285)" }}
+                    >
+                      Price: ${minPrice} - ${maxPrice}
+                    </label>
+                    <div className="space-y-1">
+                      <input
+                        type="range"
+                        min="0"
+                        max={maxPriceInProducts}
+                        value={minPrice}
+                        onChange={(e) => setMinPrice(Math.min(Number(e.target.value), maxPrice))}
+                        className="w-full"
+                        style={{ accentColor: "oklch(0.85 0.18 195)" }}
+                      />
+                      <input
+                        type="range"
+                        min="0"
+                        max={maxPriceInProducts}
+                        value={maxPrice}
+                        onChange={(e) => setMaxPrice(Math.max(Number(e.target.value), minPrice))}
+                        className="w-full"
+                        style={{ accentColor: "oklch(0.85 0.18 195)" }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Rating Filter */}
+                  <div>
+                    <label
+                      className="text-xs font-semibold mb-2 block"
+                      style={{ color: "oklch(0.75 0.01 285)" }}
+                    >
+                      Minimum Rating
+                    </label>
+                    <select
+                      value={minRating}
+                      onChange={(e) => setMinRating(Number(e.target.value))}
+                      className="w-full px-3 py-2 rounded-lg text-sm"
+                      style={{
+                        background: "oklch(0.19 0.008 265)",
+                        border: "1px solid oklch(0.25 0.008 265)",
+                        color: "oklch(0.75 0.01 285)",
+                        fontFamily: "'DM Sans', sans-serif",
+                      }}
+                    >
+                      <option value="0">All Ratings</option>
+                      <option value="3">3+ Stars</option>
+                      <option value="3.5">3.5+ Stars</option>
+                      <option value="4">4+ Stars</option>
+                      <option value="4.5">4.5+ Stars</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Reset Button */}
+                <button
+                  onClick={resetFilters}
+                  className="mt-3 px-3 py-1.5 rounded text-xs font-semibold transition-all"
                   style={{
-                    background: "oklch(0.19 0.008 265)",
+                    background: "oklch(0.20 0.008 265)",
+                    color: "oklch(0.75 0.01 285)",
                     border: "1px solid oklch(0.25 0.008 265)",
-                    color: "oklch(0.94 0.005 65)",
-                    fontFamily: "'DM Sans', sans-serif",
                   }}
-                  autoFocus
-                />
-                <div className="space-y-2 max-h-72 overflow-y-auto">
+                >
+                  Reset Filters
+                </button>
+              </div>
+
+              {/* Product List */}
+              <div className="p-4 overflow-y-auto flex-1">
+                <div className="space-y-2">
                   {filtered.map((product) => (
                     <button
                       key={product.id}
@@ -250,6 +346,23 @@ export default function ComparePage() {
                         >
                           {product.name}
                         </p>
+                        <div className="flex items-center gap-2 mt-1">
+                          <div className="flex items-center gap-0.5">
+                            <Star size={12} style={{ color: "oklch(0.85 0.18 195)", fill: "oklch(0.85 0.18 195)" }} />
+                            <span
+                              className="text-xs"
+                              style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.60 0.01 285)" }}
+                            >
+                              {product.rating}
+                            </span>
+                          </div>
+                          <span
+                            className="text-xs"
+                            style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.60 0.01 285)" }}
+                          >
+                            ({product.reviewCount})
+                          </span>
+                        </div>
                       </div>
                       <span
                         className="text-sm font-bold flex-shrink-0"
@@ -260,12 +373,14 @@ export default function ComparePage() {
                     </button>
                   ))}
                   {filtered.length === 0 && (
-                    <p
-                      className="text-center py-6 text-sm"
-                      style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.45 0.01 285)" }}
+                    <div
+                      className="text-center py-8"
+                      style={{ color: "oklch(0.55 0.01 285)" }}
                     >
-                      No products found.
-                    </p>
+                      <p style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                        No products match your filters
+                      </p>
+                    </div>
                   )}
                 </div>
               </div>
@@ -274,153 +389,126 @@ export default function ComparePage() {
         )}
 
         {/* Comparison Table */}
-        {selected.length >= 2 && (
+        {selected.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="rounded-xl overflow-hidden"
-            style={{ border: "1px solid oklch(0.22 0.008 265)" }}
-          >
-            {/* Rating Row */}
-            <div
-              className="grid border-b"
-              style={{
-                gridTemplateColumns: `160px repeat(${selected.length}, 1fr)`,
-                background: "oklch(0.19 0.008 265)",
-                borderColor: "oklch(0.22 0.008 265)",
-              }}
-            >
-              <div
-                className="p-4 text-xs font-semibold uppercase tracking-wider"
-                style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.55 0.01 285)" }}
-              >
-                Rating
-              </div>
-              {selected.map((p) => (
-                <div key={p.id} className="p-4 flex items-center gap-1.5">
-                  <div className="flex items-center gap-0.5">
-                    {[1, 2, 3, 4, 5].map((s) => (
-                      <Star
-                        key={s}
-                        size={11}
-                        fill={s <= Math.round(p.rating) ? "#FFD700" : "transparent"}
-                        style={{ color: s <= Math.round(p.rating) ? "#FFD700" : "oklch(0.35 0.008 265)" }}
-                      />
-                    ))}
-                  </div>
-                  <span
-                    className="text-xs font-medium"
-                    style={{ fontFamily: "'JetBrains Mono', monospace", color: "oklch(0.85 0.18 195)" }}
-                  >
-                    {p.rating.toFixed(1)}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* Price Row */}
-            <div
-              className="grid border-b"
-              style={{
-                gridTemplateColumns: `160px repeat(${selected.length}, 1fr)`,
-                background: "oklch(0.15 0.008 265)",
-                borderColor: "oklch(0.22 0.008 265)",
-              }}
-            >
-              <div
-                className="p-4 text-xs font-semibold uppercase tracking-wider"
-                style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.55 0.01 285)" }}
-              >
-                Price
-              </div>
-              {selected.map((p) => (
-                <div key={p.id} className="p-4">
-                  <span
-                    className="text-base font-bold"
-                    style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.94 0.005 65)" }}
-                  >
-                    ${p.price}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* Spec Rows */}
-            {allSpecs.map((spec, i) => (
-              <div
-                key={spec}
-                className="grid border-b"
-                style={{
-                  gridTemplateColumns: `160px repeat(${selected.length}, 1fr)`,
-                  background: i % 2 === 0 ? "oklch(0.13 0.008 265)" : "oklch(0.15 0.008 265)",
-                  borderColor: "oklch(0.18 0.008 265)",
-                }}
-              >
-                <div
-                  className="p-4 text-xs"
-                  style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.55 0.01 285)" }}
-                >
-                  {spec}
-                </div>
-                {selected.map((p) => (
-                  <div key={p.id} className="p-4">
-                    <span
-                      className="text-xs"
-                      style={{ fontFamily: "'JetBrains Mono', monospace", color: "oklch(0.75 0.01 285)" }}
-                    >
-                      {p.specs[spec] || "—"}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            ))}
-
-            {/* Buy Row */}
-            <div
-              className="grid"
-              style={{
-                gridTemplateColumns: `160px repeat(${selected.length}, 1fr)`,
-                background: "oklch(0.19 0.008 265)",
-              }}
-            >
-              <div className="p-4" />
-              {selected.map((p) => (
-                <div key={p.id} className="p-4">
-                  <a
-                    href={p.amazonUrl}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    className="btn-amazon flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold w-fit"
-                  >
-                    <ShoppingCart size={12} /> Buy on Amazon <ExternalLink size={10} />
-                  </a>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        )}
-
-        {selected.length < 2 && (
-          <div
-            className="text-center py-16 rounded-xl"
+            className="overflow-x-auto rounded-xl"
             style={{
               background: "oklch(0.13 0.008 265)",
               border: "1px solid oklch(0.20 0.008 265)",
             }}
           >
-            <p
-              className="text-lg font-bold mb-2"
-              style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.55 0.01 285)" }}
-            >
-              Add at least 2 products to compare
-            </p>
-            <p
-              className="text-sm"
-              style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.40 0.01 285)" }}
-            >
-              Click the "+" slots above to select products
-            </p>
-          </div>
+            <table className="w-full">
+              <tbody>
+                {/* Product Names */}
+                <tr style={{ borderBottom: "1px solid oklch(0.20 0.008 265)" }}>
+                  <td
+                    className="px-4 py-3 font-semibold text-sm"
+                    style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.75 0.01 285)" }}
+                  >
+                    Product
+                  </td>
+                  {selected.map((product) => (
+                    <td key={product.id} className="px-4 py-3 text-center">
+                      <p
+                        className="font-bold text-sm"
+                        style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.94 0.005 65)" }}
+                      >
+                        {product.name}
+                      </p>
+                    </td>
+                  ))}
+                </tr>
+
+                {/* Price */}
+                <tr style={{ borderBottom: "1px solid oklch(0.20 0.008 265)" }}>
+                  <td
+                    className="px-4 py-3 font-semibold text-sm"
+                    style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.75 0.01 285)" }}
+                  >
+                    Price
+                  </td>
+                  {selected.map((product) => (
+                    <td key={product.id} className="px-4 py-3 text-center">
+                      <p
+                        className="font-bold text-lg"
+                        style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.85 0.18 195)" }}
+                      >
+                        ${product.price}
+                      </p>
+                    </td>
+                  ))}
+                </tr>
+
+                {/* Rating */}
+                <tr style={{ borderBottom: "1px solid oklch(0.20 0.008 265)" }}>
+                  <td
+                    className="px-4 py-3 font-semibold text-sm"
+                    style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.75 0.01 285)" }}
+                  >
+                    Rating
+                  </td>
+                  {selected.map((product) => (
+                    <td key={product.id} className="px-4 py-3 text-center">
+                      <div className="flex items-center justify-center gap-1">
+                        <Star size={14} style={{ color: "oklch(0.85 0.18 195)", fill: "oklch(0.85 0.18 195)" }} />
+                        <span
+                          className="font-bold"
+                          style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.94 0.005 65)" }}
+                        >
+                          {product.rating}
+                        </span>
+                      </div>
+                    </td>
+                  ))}
+                </tr>
+
+                {/* Specs */}
+                {allSpecs.map((spec) => (
+                  <tr key={spec} style={{ borderBottom: "1px solid oklch(0.20 0.008 265)" }}>
+                    <td
+                      className="px-4 py-3 font-semibold text-sm"
+                      style={{ fontFamily: "'Space Grotesk', sans-serif", color: "oklch(0.75 0.01 285)" }}
+                    >
+                      {spec}
+                    </td>
+                    {selected.map((product) => (
+                      <td
+                        key={product.id}
+                        className="px-4 py-3 text-center text-sm"
+                        style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.75 0.01 285)" }}
+                      >
+                        {product.specs[spec as keyof typeof product.specs] || "—"}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+
+                {/* Buy Buttons */}
+                <tr>
+                  <td className="px-4 py-4" />
+                  {selected.map((product) => (
+                    <td key={product.id} className="px-4 py-4 text-center">
+                      <a
+                        href={product.amazonUrl}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm transition-all"
+                        style={{
+                          background: "oklch(0.85 0.18 195)",
+                          color: "oklch(0.13 0.008 265)",
+                        }}
+                      >
+                        <ShoppingCart size={14} />
+                        Buy on Amazon
+                      </a>
+                    </td>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+          </motion.div>
         )}
       </div>
     </div>
