@@ -22,10 +22,10 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "blog-1",
-    title: "The Ultimate Guide to Choosing Your First Smartwatch in 2025",
-    slug: "ultimate-guide-first-smartwatch-2025",
+    title: "The Ultimate Guide to Choosing Your First Smartwatch in 2026",
+    slug: "ultimate-guide-first-smartwatch-2026",
     excerpt: "Confused about which smartwatch to buy? Our comprehensive guide breaks down the top options for beginners, from budget-friendly to premium choices.",
-    content: `# The Ultimate Guide to Choosing Your First Smartwatch in 2025
+    content: `# The Ultimate Guide to Choosing Your First Smartwatch in 2026
 
 Smartwatches have become essential wearables for fitness enthusiasts, health-conscious individuals, and tech lovers. But with so many options available, how do you choose the right one?
 
@@ -100,7 +100,7 @@ Ready to choose? Check out our detailed reviews of the top smartwatches on the m
     author: "Wear Your Own Techs",
     category: "guide",
     tags: ["smartwatch", "buying-guide", "fitness", "health"],
-    image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80",
     publishedAt: "2026-05-10T10:00:00Z",
     readTime: 8,
     featured: true,
@@ -164,7 +164,7 @@ Ready to choose? Explore our collection of smart rings and smartwatches to find 
     author: "Wear Your Own Techs",
     category: "guide",
     tags: ["smart-rings", "smartwatch", "comparison", "wearables"],
-    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=600&q=80",
     publishedAt: "2026-05-08T14:30:00Z",
     readTime: 6,
     featured: true,
@@ -172,11 +172,11 @@ Ready to choose? Explore our collection of smart rings and smartwatches to find 
   {
     id: "blog-3",
     title: "New Samsung Galaxy Ring Announced: What You Need to Know",
-    slug: "samsung-galaxy-ring-announcement-2025",
+    slug: "samsung-galaxy-ring-announcement-2026",
     excerpt: "Samsung just announced the latest Galaxy Ring with improved sensors and battery life. Here's everything you need to know about the new features.",
     content: `# New Samsung Galaxy Ring Announced: What You Need to Know
 
-Samsung has just unveiled the latest iteration of its popular Galaxy Ring, and it's packed with improvements. Here's what's new and why you should care.
+Samsung has just unveiled the latest iteration of its popular Galaxy Ring for 2026, and it's packed with improvements. Here's what's new and why you should care.
 
 ## Key Improvements
 
@@ -231,7 +231,7 @@ Ready to order? Check out the latest prices on Amazon.ca.`,
     author: "Wear Your Own Techs",
     category: "news",
     tags: ["samsung", "galaxy-ring", "announcement", "new-product"],
-    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600https://images.unsplash.com/photo-1575311373937-040b3ff6e056?w=600&q=80q=80",
     publishedAt: "2026-05-05T09:15:00Z",
     readTime: 5,
     featured: true,
@@ -292,7 +292,7 @@ Have other battery-saving tips? Share them in the comments below!`,
     author: "Wear Your Own Techs",
     category: "tips",
     tags: ["smartwatch", "battery", "tips", "optimization"],
-    image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=80",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80",
     publishedAt: "2026-05-01T11:45:00Z",
     readTime: 4,
   },
