@@ -9,8 +9,8 @@ import { ArrowRight, Clock, BookOpen } from "lucide-react";
 
 const guides = [
   {
-    id: "best-smartwatch-2025",
-    title: "Best Smartwatches of 2025",
+    id: "best-smartwatch-2026",
+    title: "Best Smartwatches of 2026",
     subtitle: "The Definitive Buying Guide",
     description:
       "From the Apple Watch Ultra 2 to the Garmin Fēnix 8, we break down every major smartwatch to help you find the perfect match for your lifestyle, budget, and ecosystem.",
@@ -27,8 +27,8 @@ const guides = [
     href: "/category/smartwatches",
   },
   {
-    id: "best-fitness-tracker-2025",
-    title: "Best Fitness Trackers of 2025",
+    id: "best-fitness-tracker-2026",
+    title: "Best Fitness Trackers of 2026",
     subtitle: "From Budget Bands to Pro Monitors",
     description:
       "Not everyone needs a full smartwatch. Fitness trackers offer focused health monitoring at a lower price. We compare the Fitbit Charge 6, WHOOP 5.0, and more.",
@@ -45,8 +45,8 @@ const guides = [
     href: "/category/fitness-trackers",
   },
   {
-    id: "best-smart-ring-2025",
-    title: "Best Smart Rings of 2025",
+    id: "best-smart-ring-2026",
+    title: "Best Smart Rings of 2026",
     subtitle: "The Discreet Health Tracker",
     description:
       "Smart rings are the most discreet wearables available. We compare the Oura Ring 4, Samsung Galaxy Ring, and RingConn Gen 2 to find the best option for you.",
@@ -63,8 +63,8 @@ const guides = [
     href: "/category/smart-rings",
   },
   {
-    id: "best-smart-glasses-2025",
-    title: "Best Smart Glasses of 2025",
+    id: "best-smart-glasses-2026",
+    title: "Best Smart Glasses of 2026",
     subtitle: "AI-Powered Eyewear Reviewed",
     description:
       "Smart glasses have finally gone mainstream. The Ray-Ban Meta Wayfarer and Amazon Echo Frames bring AI assistants to your face. Here's what you need to know.",
