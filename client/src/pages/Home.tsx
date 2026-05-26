@@ -14,7 +14,7 @@ const HERO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663651644589/cNZ
 const CATEGORY_IMAGES: Record<string, string> = {
   smartwatches: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=800&fit=crop",
   "fitness-trackers": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=800&h=800&fit=crop",
-  "smart-rings": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=800&fit=crop",
+  "smart-rings": "https://m.media-amazon.com/images/I/61NRd+-YgGL._AC_SL1500_.jpg",
   "smart-glasses": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&h=800&fit=crop",
   "vr-headsets": "https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=800&h=800&fit=crop",
   "kids-wearables": "https://images.unsplash.com/photo-1577720643272-265f434b5d9f?w=800&h=800&fit=crop",
