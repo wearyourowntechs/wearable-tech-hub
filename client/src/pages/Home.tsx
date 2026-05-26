@@ -16,11 +16,11 @@ const CATEGORY_IMAGES: Record<string, string> = {
   "fitness-trackers": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=800&h=800&fit=crop",
   "smart-rings": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=800&fit=crop",
   "smart-glasses": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&h=800&fit=crop",
-  "vr-headsets": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&h=800&fit=croph=800https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&h=800&fit=cropfit=crop",
-  "kids-wearables": "https://images.unsplash.com/photo-1587300411107-ec48553489af?w=800https://images.unsplash.com/photo-1552053831-71594a27c62d?w=800&h=800&fit=croph=800https://images.unsplash.com/photo-1552053831-71594a27c62d?w=800&h=800&fit=cropfit=crop",
-  "pet-tech": "https://images.unsplash.com/photo-1587300411107-ec48553489af?w=800https://images.unsplash.com/photo-1552053831-71594a27c62d?w=800&h=800&fit=croph=800https://images.unsplash.com/photo-1552053831-71594a27c62d?w=800&h=800&fit=cropfit=crop",
+  "vr-headsets": "https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=800&h=800&fit=crop",
+  "kids-wearables": "https://images.unsplash.com/photo-1577720643272-265f434b5d9f?w=800&h=800&fit=crop",
+  "pet-tech": "https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=800&h=800&fit=crop",
   "bluetooth-headsets": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=800&fit=crop",
-  "wearable-jewelry": "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&h=800&fit=crop",
+  "wearable-jewelry": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=800&fit=crop",
   "bluetooth-hats": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=800&fit=crop",
 };
 
