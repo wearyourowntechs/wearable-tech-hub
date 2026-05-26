@@ -9,6 +9,7 @@ import { Clock, User, AlertCircle } from "lucide-react";
 import { seoReviews } from "@/lib/seoReviews";
 import { products } from "@/lib/products";
 import SocialShareButtons from "@/components/SocialShareButtons";
+import ReviewCommentsSection from "@/components/ReviewCommentsSection";
 import { Button } from "@/components/ui/button";
 import Markdown from "react-markdown";
 
@@ -358,6 +359,9 @@ export default function ReviewDetailPage() {
           </motion.div>
         </div>
       </article>
+
+      {/* User Reviews & Comments Section */}
+      <ReviewCommentsSection reviewSlug={slug} productName={review.productName} />
 
       {/* Back to Reviews CTA */}
       <section className="py-12 md:py-16 border-t" style={{ borderColor: "oklch(0.18 0.008 265)" }}>
