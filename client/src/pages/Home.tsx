@@ -40,7 +40,12 @@ const staggerContainer = {
 
 export default function Home() {
   const featured = getTopRatedProducts(8);
-  const topRated = getTopRatedProducts();
+  
+  // Get top-rated product from each category
+  const topRated = categories.map(cat => {
+    const categoryProducts = getProductsByCategory(cat.id);
+    return categoryProducts.sort((a, b) => b.rating - a.rating)[0];
+  }).filter(Boolean);
 
   return (
     <div className="min-h-screen">
@@ -445,7 +450,7 @@ export default function Home() {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {topRated.map((product, i) => (
                 <motion.div key={product.id} variants={fadeUp} custom={i + 1}>
                   <div
