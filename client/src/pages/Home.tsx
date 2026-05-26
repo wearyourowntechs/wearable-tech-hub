@@ -20,7 +20,7 @@ const CATEGORY_IMAGES: Record<string, string> = {
   "kids-wearables": "https://m.media-amazon.com/images/I/71+yTZnhAeL._AC_SL1500_.jpg",
   "pet-tech": "https://m.media-amazon.com/images/I/61iiMRU7DQL._AC_SL1500_.jpg",
   "bluetooth-headsets": "https://m.media-amazon.com/images/I/61hQumf6ufL._AC_SL1500_.jpg",
-  "wearable-jewelry": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=800&fit=crop",
+  "wearable-jewelry": "https://m.media-amazon.com/images/I/612yOMdW8IL._AC_SL1500_.jpg",
   "bluetooth-hats": "https://m.media-amazon.com/images/I/51KKDkDocDL._AC_SL1024_.jpg",
 };
 
