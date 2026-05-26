@@ -364,18 +364,34 @@ export default function Home() {
               </h2>
             </motion.div>
 
+            <style>{`
+              @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+              }
+              .animate-fade-in {
+                animation: fadeIn 0.6s ease-in-out forwards;
+              }
+            `}</style>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
               {categories.map((category: any, i: any) => (
                 <motion.div key={category.id} variants={fadeUp} custom={i + 1}>
                   <Link href={`/category/${category.id}`}>
                     <div
-                      className="card-hover relative overflow-hidden rounded-xl aspect-[4/3] group cursor-pointer"
-                      style={{ border: "1px solid oklch(0.22 0.008 265)" }}
+                      className="card-hover relative overflow-hidden rounded-xl aspect-[4/3] group cursor-pointer transition-all duration-300 hover:shadow-2xl"
+                      style={{ border: "1px solid oklch(0.22 0.008 265)", boxShadow: "0 0 0 0 oklch(0.85 0.18 195 / 0)" }}
+                      onMouseEnter={(e) => {
+                        (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px 2px oklch(0.85 0.18 195 / 0.3)";
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.currentTarget as HTMLElement).style.boxShadow = "0 0 0 0 oklch(0.85 0.18 195 / 0)";
+                      }}
                     >
                       <img
                         src={CATEGORY_IMAGES[category.id as keyof typeof CATEGORY_IMAGES]}
                         alt={category.name}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110 animate-fade-in"
+                        loading="lazy"
                       />
                       <div
                         className="absolute inset-0"
