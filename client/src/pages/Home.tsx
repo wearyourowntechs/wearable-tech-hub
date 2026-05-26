@@ -21,7 +21,7 @@ const CATEGORY_IMAGES: Record<string, string> = {
   "pet-tech": "https://m.media-amazon.com/images/I/61iiMRU7DQL._AC_SL1500_.jpg",
   "bluetooth-headsets": "https://m.media-amazon.com/images/I/61hQumf6ufL._AC_SL1500_.jpg",
   "wearable-jewelry": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&h=800&fit=crop",
-  "bluetooth-hats": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&h=800&fit=crop",
+  "bluetooth-hats": "https://m.media-amazon.com/images/I/51KKDkDocDL._AC_SL1024_.jpg",
 };
 
 const fadeUp = {
