@@ -15,6 +15,7 @@ import ComparePage from "./pages/ComparePage";
 import DealsPage from "./pages/DealsPage";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
+import CategoryLandingPage from "./pages/CategoryLandingPage";
 
 function Router() {
   return (
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/deals" component={DealsPage} />
       <Route path="/blog" component={BlogPage} />
       <Route path="/blog/:slug" component={BlogPostPage} />
+      <Route path="/category-guide/:slug" component={CategoryLandingPage} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
