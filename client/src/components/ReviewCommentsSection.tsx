@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ThumbsUp, User, Calendar } from "lucide-react";
+import { ThumbsUp, User, Calendar, Shield } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import StarRating from "@/components/StarRating";
-import { getReviewsBySlug, getAverageRating, getRatingDistribution, addUserReview } from "@/lib/reviewComments";
+import VerifiedBadge from "@/components/VerifiedBadge";
+import { getReviewsBySlug, getAverageRating, getRatingDistribution, addUserReview, getVerifiedPurchaseCount, getVerifiedPurchasePercentage } from "@/lib/reviewComments";
 
 interface ReviewCommentsSectionProps {
   reviewSlug: string;
@@ -27,6 +28,8 @@ export default function ReviewCommentsSection({
   const reviews = getReviewsBySlug(reviewSlug);
   const averageRating = getAverageRating(reviewSlug);
   const ratingDistribution = getRatingDistribution(reviewSlug);
+  const verifiedCount = getVerifiedPurchaseCount(reviewSlug);
+  const verifiedPercentage = getVerifiedPurchasePercentage(reviewSlug);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -97,6 +100,40 @@ export default function ReviewCommentsSection({
             Help others make informed decisions by sharing your thoughts on {productName}.
           </p>
         </motion.div>
+
+        {/* Trust Indicators */}
+        {reviews.length > 0 && (
+          <motion.div
+            variants={fadeIn}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.05 }}
+            className="mb-8 p-4 rounded-lg flex items-center gap-4"
+            style={{
+              background: "oklch(0.85 0.18 195 / 0.08)",
+              border: "1px solid oklch(0.85 0.18 195 / 0.2)",
+            }}
+          >
+            <Shield size={20} style={{ color: "oklch(0.85 0.18 195)" }} />
+            <div>
+              <p
+                className="font-semibold text-sm"
+                style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  color: "oklch(0.85 0.18 195)",
+                }}
+              >
+                {verifiedCount} of {reviews.length} reviews from verified purchases ({verifiedPercentage}%)
+              </p>
+              <p
+                className="text-xs"
+                style={{ color: "oklch(0.65 0.01 285)", fontFamily: "'DM Sans', sans-serif" }}
+              >
+                Verified purchases increase trust and help us maintain review quality
+              </p>
+            </div>
+          </motion.div>
+        )}
 
         {/* Rating Summary */}
         {reviews.length > 0 && (
@@ -363,6 +400,19 @@ export default function ReviewCommentsSection({
                   </div>
                   <StarRating rating={review.rating} readOnly size="sm" showLabel={false} />
                 </div>
+
+                {/* Verified Badge */}
+                {review.isVerifiedPurchase && (
+                  <div className="mb-3">
+                    <VerifiedBadge
+                      variant="block"
+                      size="sm"
+                      purchaseAmount={review.purchaseAmount}
+                      purchaseDate={review.purchaseDate}
+                      productVariant={review.productVariant}
+                    />
+                  </div>
+                )}
 
                 {/* Comment */}
                 <p

@@ -12,6 +12,10 @@ export interface UserReview {
   comment: string;
   createdAt: string; // ISO date string
   helpful: number; // Count of helpful votes
+  isVerifiedPurchase: boolean; // Whether user purchased through affiliate link
+  purchaseDate?: string; // ISO date string of purchase
+  purchaseAmount?: number; // Amount spent (in CAD)
+  productVariant?: string; // Which variant/color was purchased
 }
 
 // Mock data - in production, this would come from a backend/database
@@ -25,6 +29,10 @@ export const userReviews: UserReview[] = [
     comment: "Excellent review! Very detailed and helped me decide to purchase. The battery life section was particularly helpful.",
     createdAt: "2026-05-24T10:30:00Z",
     helpful: 12,
+    isVerifiedPurchase: true,
+    purchaseDate: "2026-05-20T14:22:00Z",
+    purchaseAmount: 449.99,
+    productVariant: "Obsidian",
   },
   {
     id: "review-2",
@@ -35,6 +43,7 @@ export const userReviews: UserReview[] = [
     comment: "Great comparison with other smartwatches. Would have liked more info on the fitness tracking accuracy.",
     createdAt: "2026-05-23T14:15:00Z",
     helpful: 8,
+    isVerifiedPurchase: false,
   },
   {
     id: "review-3",
@@ -45,6 +54,10 @@ export const userReviews: UserReview[] = [
     comment: "Exactly what I needed! The pros and cons section made my decision so much easier.",
     createdAt: "2026-05-22T09:45:00Z",
     helpful: 15,
+    isVerifiedPurchase: true,
+    purchaseDate: "2026-05-18T09:15:00Z",
+    purchaseAmount: 449.99,
+    productVariant: "Porcelain",
   },
   {
     id: "review-4",
@@ -55,6 +68,10 @@ export const userReviews: UserReview[] = [
     comment: "Perfect guide for iPhone users. The health features comparison was spot on.",
     createdAt: "2026-05-20T16:20:00Z",
     helpful: 10,
+    isVerifiedPurchase: true,
+    purchaseDate: "2026-05-15T11:45:00Z",
+    purchaseAmount: 599.99,
+    productVariant: "Stainless Steel",
   },
   {
     id: "review-5",
@@ -65,6 +82,7 @@ export const userReviews: UserReview[] = [
     comment: "Comprehensive review. The price section could have included more Canadian retailers.",
     createdAt: "2026-05-19T11:00:00Z",
     helpful: 6,
+    isVerifiedPurchase: false,
   },
 ];
 
@@ -99,7 +117,8 @@ export function addUserReview(
   userName: string,
   userEmail: string,
   rating: number,
-  comment: string
+  comment: string,
+  isVerifiedPurchase: boolean = false
 ): UserReview {
   const newReview: UserReview = {
     id: `review-${Date.now()}`,
@@ -110,7 +129,38 @@ export function addUserReview(
     comment,
     createdAt: new Date().toISOString(),
     helpful: 0,
+    isVerifiedPurchase,
   };
   userReviews.push(newReview);
   return newReview;
+}
+
+// Get verified purchase count for a review
+export function getVerifiedPurchaseCount(slug: string): number {
+  return getReviewsBySlug(slug).filter((review) => review.isVerifiedPurchase).length;
+}
+
+// Get verified purchase percentage
+export function getVerifiedPurchasePercentage(slug: string): number {
+  const reviews = getReviewsBySlug(slug);
+  if (reviews.length === 0) return 0;
+  const verified = reviews.filter((review) => review.isVerifiedPurchase).length;
+  return Math.round((verified / reviews.length) * 100);
+}
+
+// Mark a review as verified purchase (admin function)
+export function markAsVerifiedPurchase(
+  reviewId: string,
+  purchaseDate: string,
+  purchaseAmount: number,
+  productVariant?: string
+): UserReview | undefined {
+  const review = userReviews.find((r) => r.id === reviewId);
+  if (review) {
+    review.isVerifiedPurchase = true;
+    review.purchaseDate = purchaseDate;
+    review.purchaseAmount = purchaseAmount;
+    review.productVariant = productVariant;
+  }
+  return review;
 }
