@@ -18,8 +18,8 @@ import BlogPostPage from "./pages/BlogPostPage";
 import CategoryLandingPage from "./pages/CategoryLandingPage";
 import SEOReviewsPage from "./pages/SEOReviewsPage";
 import ReviewDetailPage from "./pages/ReviewDetailPage";
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path="/" component={Home} />

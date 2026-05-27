@@ -3,6 +3,7 @@
 // Hero → Featured Products → Categories → Top Picks → Newsletter
 // =============================================================
 
+import { useAuth } from "@/_core/hooks/useAuth";
 import { motion } from "framer-motion";
 import { ArrowRight, Zap, Shield, Star, TrendingUp, ChevronRight, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
@@ -39,6 +40,10 @@ const staggerContainer = {
 };
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   const featured = getTopRatedProducts(8);
   
   // Get top-rated product from each category
