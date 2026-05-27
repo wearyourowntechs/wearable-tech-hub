@@ -18,8 +18,7 @@ watch_paths = ["client/src/**/*.tsx", "client/src/**/*.ts"]
 [build.upload]
 format = "service-worker"
 
-[triggers.crons]
-# Optional: Add cron triggers if needed
+# Cron triggers are optional and can be added later if needed
 
 [site]
 bucket = "./dist/public"
