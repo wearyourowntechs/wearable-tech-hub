@@ -46,7 +46,7 @@ export default function SocialMediaManager() {
   const pendingCount = pendingPosts?.length || 0;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto py-8 px-4">
         {/* Header */}
         <div className="mb-8">
@@ -80,7 +80,7 @@ export default function SocialMediaManager() {
 
           {/* Stats Cards */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <Card>
+            <Card className="bg-gray-50 border-gray-200">
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -92,7 +92,7 @@ export default function SocialMediaManager() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-gray-50 border-gray-200">
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -104,7 +104,7 @@ export default function SocialMediaManager() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-gray-50 border-gray-200">
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -116,7 +116,7 @@ export default function SocialMediaManager() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-gray-50 border-gray-200">
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
