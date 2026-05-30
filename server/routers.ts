@@ -11,6 +11,7 @@ import {
   getVerifiedPurchasePercentage,
   addProductReview,
 } from "./db";
+import { generatePostFromUrl } from "./post-generator";
 
 export const appRouter = router({
   system: systemRouter,
@@ -84,6 +85,101 @@ export const appRouter = router({
           productVariant: input.productVariant,
         });
         return review;
+      }),
+  }),
+
+  posts: router({
+    generateFromUrl: publicProcedure
+      .input(
+        z.object({
+          productUrl: z.string().url(),
+          platforms: z
+            .array(z.enum(["facebook", "instagram", "tiktok", "x", "pinterest"]))
+            .optional(),
+        })
+      )
+      .mutation(async ({ input }) => {
+        const AFFILIATE_ID = "weyoowte0d-20";
+        const generatedPost = await generatePostFromUrl(
+          input.productUrl,
+          input.platforms
+        );
+
+        let affiliateLink = generatedPost.amazonLink;
+        if (affiliateLink && !affiliateLink.includes(AFFILIATE_ID)) {
+          affiliateLink = `${affiliateLink}?tag=${AFFILIATE_ID}`;
+        }
+
+        return {
+          success: true,
+          post: {
+            caption: generatedPost.caption,
+            facebookCaption: generatedPost.facebookCaption,
+            instagramCaption: generatedPost.instagramCaption,
+            tiktokCaption: generatedPost.tiktokCaption,
+            xCaption: generatedPost.xCaption,
+            pinterestCaption: generatedPost.pinterestCaption,
+            hashtags: generatedPost.hashtags,
+            imageUrl: generatedPost.imageUrl,
+            amazonLink: generatedPost.amazonLink,
+            affiliateLink,
+            platforms: generatedPost.platforms,
+          },
+        };
+      }),
+
+    list: publicProcedure
+      .input(
+        z.object({
+          status: z.enum(["draft", "pending_approval", "approved", "scheduled", "posted", "failed"]).optional(),
+        }).optional()
+      )
+      .query(async () => {
+        return [];
+      }),
+
+    getById: publicProcedure
+      .input(z.object({ postId: z.number() }))
+      .query(async ({ input }) => {
+        return null;
+      }),
+
+    getPendingApproval: publicProcedure.query(async () => {
+      return [];
+    }),
+
+    submitForApproval: publicProcedure
+      .input(z.object({ postId: z.number() }))
+      .mutation(async ({ input }) => {
+        return { success: true };
+      }),
+
+    create: publicProcedure
+      .input(
+        z.object({
+          caption: z.string(),
+          facebookCaption: z.string().optional(),
+          instagramCaption: z.string().optional(),
+          tiktokCaption: z.string().optional(),
+          xCaption: z.string().optional(),
+          pinterestCaption: z.string().optional(),
+          platforms: z.array(z.string()),
+          imageUrl: z.string().optional(),
+          amazonLink: z.string().optional(),
+          hashtags: z.string().optional(),
+          scheduledTime: z.date().optional(),
+        })
+      )
+      .mutation(async ({ input }) => {
+        return { success: true, postId: 1 };
+      }),
+  }),
+
+  approvals: router({
+    getQueue: publicProcedure
+      .input(z.object({ status: z.enum(["pending", "approved", "rejected"]).optional() }))
+      .query(async () => {
+        return [];
       }),
   }),
 });

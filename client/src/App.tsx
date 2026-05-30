@@ -18,6 +18,7 @@ import BlogPostPage from "./pages/BlogPostPage";
 import CategoryLandingPage from "./pages/CategoryLandingPage";
 import SEOReviewsPage from "./pages/SEOReviewsPage";
 import ReviewDetailPage from "./pages/ReviewDetailPage";
+import SocialMediaManager from "./pages/SocialMediaManager";
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
@@ -34,6 +35,7 @@ function Router() {
       <Route path="/category-landing/:id" component={CategoryLandingPage} />
       <Route path="/seo-reviews" component={SEOReviewsPage} />
       <Route path="/review/:slug" component={ReviewDetailPage} />
+      <Route path="/social-media-manager" component={SocialMediaManager} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
