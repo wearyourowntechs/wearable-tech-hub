@@ -1,24 +1,5 @@
-name = "wearyourowntechs"
-type = "javascript"
-account_id = ""
-workers_dev = true
-route = ""
-zone_id = ""
+name = "wearable-tech-hub"
+compatibility_date = "2024-01-01"
 
-[env.production]
-name = "wearyourowntechs-prod"
-route = "wearyourowntechs.com/*"
-zone_id = ""
-
-[build]
-command = "npm run build"
-cwd = "./"
-watch_paths = ["client/src/**/*.tsx", "client/src/**/*.ts"]
-
-[build.upload]
-format = "service-worker"
-
-# Cron triggers are optional and can be added later if needed
-
-[site]
-bucket = "./dist/public"
+[vars]
+ENVIRONMENT = "production"
