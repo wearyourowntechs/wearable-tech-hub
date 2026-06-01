@@ -66,13 +66,20 @@ export default function GeneratePostDialog({
 
     try {
       setIsLoading(true);
+      
+      if (!productUrl.trim().startsWith('http')) {
+        toast.error('Please enter a valid URL (starting with http:// or https://)');
+        setIsLoading(false);
+        return;
+      }
+      
       const result = await generateMutation.mutateAsync({
         productUrl: productUrl.trim(),
         platforms: selectedPlatforms as any,
       });
 
       toast.success(
-        `Post generated successfully!`
+        `Post generated successfully! Ready for review.`
       );
       utils.posts.list.invalidate();
 

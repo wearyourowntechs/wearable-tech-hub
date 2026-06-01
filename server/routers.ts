@@ -12,6 +12,7 @@ import {
   addProductReview,
 } from "./db";
 import { generatePostFromUrl } from "./post-generator";
+import { postStore } from "./post-store";
 
 export const appRouter = router({
   system: systemRouter,
@@ -110,21 +111,25 @@ export const appRouter = router({
           affiliateLink = `${affiliateLink}?tag=${AFFILIATE_ID}`;
         }
 
+        // Create the post in the store
+        const post = postStore.addPost({
+          caption: generatedPost.caption,
+          facebookCaption: generatedPost.facebookCaption,
+          instagramCaption: generatedPost.instagramCaption,
+          tiktokCaption: generatedPost.tiktokCaption,
+          xCaption: generatedPost.xCaption,
+          pinterestCaption: generatedPost.pinterestCaption,
+          hashtags: generatedPost.hashtags,
+          imageUrl: generatedPost.imageUrl,
+          amazonLink: generatedPost.amazonLink,
+          affiliateLink,
+          platforms: generatedPost.platforms,
+          status: "draft",
+        });
+
         return {
           success: true,
-          post: {
-            caption: generatedPost.caption,
-            facebookCaption: generatedPost.facebookCaption,
-            instagramCaption: generatedPost.instagramCaption,
-            tiktokCaption: generatedPost.tiktokCaption,
-            xCaption: generatedPost.xCaption,
-            pinterestCaption: generatedPost.pinterestCaption,
-            hashtags: generatedPost.hashtags,
-            imageUrl: generatedPost.imageUrl,
-            amazonLink: generatedPost.amazonLink,
-            affiliateLink,
-            platforms: generatedPost.platforms,
-          },
+          post,
         };
       }),
 
@@ -134,24 +139,27 @@ export const appRouter = router({
           status: z.enum(["draft", "pending_approval", "approved", "scheduled", "posted", "failed"]).optional(),
         }).optional()
       )
-      .query(async () => {
-        return [];
+      .query(async ({ input }) => {
+        return postStore.getAllPosts(input?.status);
       }),
 
     getById: publicProcedure
       .input(z.object({ postId: z.number() }))
       .query(async ({ input }) => {
-        return null;
+        return postStore.getPost(input.postId) || null;
       }),
 
     getPendingApproval: publicProcedure.query(async () => {
-      return [];
+      return postStore.getAllPosts("pending_approval");
     }),
 
     submitForApproval: publicProcedure
       .input(z.object({ postId: z.number() }))
       .mutation(async ({ input }) => {
-        return { success: true };
+        const post = postStore.updatePost(input.postId, {
+          status: "pending_approval",
+        });
+        return { success: !!post };
       }),
 
     create: publicProcedure
@@ -171,7 +179,11 @@ export const appRouter = router({
         })
       )
       .mutation(async ({ input }) => {
-        return { success: true, postId: 1 };
+        const post = postStore.addPost({
+          ...input,
+          status: "draft",
+        });
+        return { success: true, postId: post.id, post };
       }),
   }),
 
@@ -179,7 +191,25 @@ export const appRouter = router({
     getQueue: publicProcedure
       .input(z.object({ status: z.enum(["pending", "approved", "rejected"]).optional() }))
       .query(async () => {
-        return [];
+        return postStore.getAllPosts("pending_approval");
+      }),
+
+    approve: publicProcedure
+      .input(z.object({ postId: z.number() }))
+      .mutation(async ({ input }) => {
+        const post = postStore.updatePost(input.postId, {
+          status: "approved",
+        });
+        return { success: !!post };
+      }),
+
+    reject: publicProcedure
+      .input(z.object({ postId: z.number() }))
+      .mutation(async ({ input }) => {
+        const post = postStore.updatePost(input.postId, {
+          status: "draft",
+        });
+        return { success: !!post };
       }),
   }),
 });
