@@ -151,9 +151,9 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               {[
-                { href: "/privacy", label: "Privacy Policy" },
-                { href: "/affiliate-disclosure", label: "Affiliate Disclosure" },
-                { href: "/contact", label: "Contact" },
+                { href: "/legal", label: "Legal & Privacy" },
+                { href: "/legal", label: "Terms of Service" },
+                { href: "/legal", label: "Cookie Policy" },
               ].map((item) => (
                 <li key={item.href}>
                   <Link href={item.href}>
