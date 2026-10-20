@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["client/src/redesign/**/*", "shared/affiliate.ts", "scripts/prerender.tsx", "scripts/routes.ts"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": { "target": "ES2022", "incremental": false }
+}

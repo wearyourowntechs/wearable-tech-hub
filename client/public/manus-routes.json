@@ -1,0 +1,636 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "Wear Your Own Techs | Clear Wearable Comparisons"
+    },
+    {
+      "path": "/reviews",
+      "title": "Wearable Reviews & Model Directory | Wear Your Own Techs"
+    },
+    {
+      "path": "/explore",
+      "title": "Explore Wearable Models | Wear Your Own Techs"
+    },
+    {
+      "path": "/compare",
+      "title": "Compare Wearables Side by Side | Wear Your Own Techs"
+    },
+    {
+      "path": "/comparisons",
+      "title": "Wearable Comparisons & Clear Verdicts | Wear Your Own Techs"
+    },
+    {
+      "path": "/find-your-fit",
+      "title": "Find Your Wearable Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/saved",
+      "title": "Your Saved Wearable Picks | Wear Your Own Techs"
+    },
+    {
+      "path": "/guides",
+      "title": "Wearable Buying Guides | Wear Your Own Techs"
+    },
+    {
+      "path": "/buying-guides",
+      "title": "Wearable Buying Guides | Wear Your Own Techs"
+    },
+    {
+      "path": "/about",
+      "title": "Our Wearable Review Approach | Wear Your Own Techs"
+    },
+    {
+      "path": "/disclosure",
+      "title": "Affiliate Disclosure & Price Sources | Wear Your Own Techs"
+    },
+    {
+      "path": "/privacy",
+      "title": "Privacy & Browser Preferences | Wear Your Own Techs"
+    },
+    {
+      "path": "/legal",
+      "title": "Privacy & Legal Information | Wear Your Own Techs"
+    },
+    {
+      "path": "/category/smartwatches",
+      "title": "Smartwatches Models & Advice | Wear Your Own Techs"
+    },
+    {
+      "path": "/category/fitness-trackers",
+      "title": "Fitness trackers Models & Advice | Wear Your Own Techs"
+    },
+    {
+      "path": "/category/smart-rings",
+      "title": "Smart rings Models & Advice | Wear Your Own Techs"
+    },
+    {
+      "path": "/category/smart-glasses",
+      "title": "Smart glasses Models & Advice | Wear Your Own Techs"
+    },
+    {
+      "path": "/category/hearables",
+      "title": "Wearable audio Models & Advice | Wear Your Own Techs"
+    },
+    {
+      "path": "/category/vr-headsets",
+      "title": "VR Headsets Models & Advice | Wear Your Own Techs"
+    },
+    {
+      "path": "/category/kids-wearables",
+      "title": "Kids Wearables Models & Advice | Wear Your Own Techs"
+    },
+    {
+      "path": "/category/pet-tech",
+      "title": "Pet Tech Models & Advice | Wear Your Own Techs"
+    },
+    {
+      "path": "/category/bluetooth-headsets",
+      "title": "Bluetooth Headsets Models & Advice | Wear Your Own Techs"
+    },
+    {
+      "path": "/category/wearable-jewelry",
+      "title": "Wearable Jewelry Models & Advice | Wear Your Own Techs"
+    },
+    {
+      "path": "/category/bluetooth-hats",
+      "title": "Bluetooth Hats Models & Advice | Wear Your Own Techs"
+    },
+    {
+      "path": "/category/accessories",
+      "title": "Accessories Models & Advice | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/apple-watch-series-10",
+      "title": "Apple Watch Series 10 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/apple-watch-series-10",
+      "title": "Apple Watch Series 10 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/oura-ring-4",
+      "title": "Oura Ring 4 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/oura-ring-4",
+      "title": "Oura Ring 4 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/garmin-venu-3",
+      "title": "Garmin Venu 3 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/garmin-venu-3",
+      "title": "Garmin Venu 3 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/sony-linkbuds-fit",
+      "title": "Sony LinkBuds Fit Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/sony-linkbuds-fit",
+      "title": "Sony LinkBuds Fit Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/google-pixel-watch-4",
+      "title": "Google Pixel Watch 4 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/google-pixel-watch-4",
+      "title": "Google Pixel Watch 4 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/garmin-vivoactive-5",
+      "title": "Garmin vívoactive 5 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/garmin-vivoactive-5",
+      "title": "Garmin vívoactive 5 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/apple-watch-se-3",
+      "title": "Apple Watch SE 3 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/apple-watch-se-3",
+      "title": "Apple Watch SE 3 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/amazfit-balance-2",
+      "title": "Amazfit Balance 2 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/amazfit-balance-2",
+      "title": "Amazfit Balance 2 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/coros-apex-4",
+      "title": "COROS APEX 4 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/coros-apex-4",
+      "title": "COROS APEX 4 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/huawei-gt-6-pro",
+      "title": "HUAWEI GT 6 Pro Smart Watch Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/huawei-gt-6-pro",
+      "title": "HUAWEI GT 6 Pro Smart Watch Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/huawei-watch-ultimate-2",
+      "title": "HUAWEI WATCH Ultimate 2 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/huawei-watch-ultimate-2",
+      "title": "HUAWEI WATCH Ultimate 2 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/garmin-instinct-3",
+      "title": "Garmin Instinct® 3 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/garmin-instinct-3",
+      "title": "Garmin Instinct® 3 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/whoop-5-0",
+      "title": "WHOOP 5.0/MG Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/whoop-5-0",
+      "title": "WHOOP 5.0/MG Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/apple-watch-series-11",
+      "title": "Apple Watch Series 11 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/apple-watch-series-11",
+      "title": "Apple Watch Series 11 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/amazfit-t-rex-3-pro",
+      "title": "Amazfit T-Rex 3 Pro Smart Watch Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/amazfit-t-rex-3-pro",
+      "title": "Amazfit T-Rex 3 Pro Smart Watch Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/garmin-venu-4",
+      "title": "Garmin Venu® 4 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/garmin-venu-4",
+      "title": "Garmin Venu® 4 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/apple-watch-ultra-3",
+      "title": "Apple Watch Ultra 3 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/apple-watch-ultra-3",
+      "title": "Apple Watch Ultra 3 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/samsung-galaxy-ring",
+      "title": "Samsung Galaxy Ring Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/samsung-galaxy-ring",
+      "title": "Samsung Galaxy Ring Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/ultrahuman-ring-air",
+      "title": "ULTRAHUMAN Ring AIR Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/ultrahuman-ring-air",
+      "title": "ULTRAHUMAN Ring AIR Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/ringconn-gen-2",
+      "title": "RingConn Gen 2 SmartRing Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/ringconn-gen-2",
+      "title": "RingConn Gen 2 SmartRing Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/ray-ban-meta-wayfarer",
+      "title": "Ray-Ban | Meta Wayfarer Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/ray-ban-meta-wayfarer",
+      "title": "Ray-Ban | Meta Wayfarer Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/viture-luma-ultra",
+      "title": "VITURE Luma Ultra XR Glasses Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/viture-luma-ultra",
+      "title": "VITURE Luma Ultra XR Glasses Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/hud-display-sports",
+      "title": "HUD Display Sports Glasses Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/hud-display-sports",
+      "title": "HUD Display Sports Glasses Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/oakley-smart",
+      "title": "Oakley Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/oakley-smart",
+      "title": "Oakley Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/oakley-meta-hstn",
+      "title": "Oakley Meta HSTN Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/oakley-meta-hstn",
+      "title": "Oakley Meta HSTN Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/smartglasses-camera",
+      "title": "SmartGlasses with Camera Display Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/smartglasses-camera",
+      "title": "SmartGlasses with Camera Display Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/meta-quest-3",
+      "title": "Meta Quest 3 512GB Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/meta-quest-3",
+      "title": "Meta Quest 3 512GB Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/pimax-crystal-light",
+      "title": "Pimax Crystal Light VR Headset with Controllers Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/pimax-crystal-light",
+      "title": "Pimax Crystal Light VR Headset with Controllers Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/pimax-crystal-super",
+      "title": "Pimax Crystal Super VR Headset Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/pimax-crystal-super",
+      "title": "Pimax Crystal Super VR Headset Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/htc-vive-focus",
+      "title": "HTC Vive Focus Vision Full Kit Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/htc-vive-focus",
+      "title": "HTC Vive Focus Vision Full Kit Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/vr-headset-generic",
+      "title": "VR Headset Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/vr-headset-generic",
+      "title": "VR Headset Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/5k-vr-headset",
+      "title": "5K VR Headset Head Display Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/5k-vr-headset",
+      "title": "5K VR Headset Head Display Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/4g-kids-gps-watch",
+      "title": "4G Kids GPS Smart Watch Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/4g-kids-gps-watch",
+      "title": "4G Kids GPS Smart Watch Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/emoji-gaming-watch",
+      "title": "Emoji, Gaming Smart Watch Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/emoji-gaming-watch",
+      "title": "Emoji, Gaming Smart Watch Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/vtech-kidizoom",
+      "title": "VTech KidiZoom Smartwatch SE Bilingual Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/vtech-kidizoom",
+      "title": "VTech KidiZoom Smartwatch SE Bilingual Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/mini-body-camera",
+      "title": "Mini Body Camera with 32GB Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/mini-body-camera",
+      "title": "Mini Body Camera with 32GB Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/accutime-jojo",
+      "title": "Accutime JoJo Siwa Kids Smartwatch Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/accutime-jojo",
+      "title": "Accutime JoJo Siwa Kids Smartwatch Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/accutime-harry-potter",
+      "title": "Accutime Harry Potter Kids Smart Watch Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/accutime-harry-potter",
+      "title": "Accutime Harry Potter Kids Smart Watch Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/fi-mini-gps",
+      "title": "New Fi Mini GPS Tracker for Dogs, Cats, Small Pets Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/fi-mini-gps",
+      "title": "New Fi Mini GPS Tracker for Dogs, Cats, Small Pets Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/wireless-dog-fence",
+      "title": "Wireless Dog Fence Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/wireless-dog-fence",
+      "title": "Wireless Dog Fence Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/loona-v24",
+      "title": "Loona V24 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/loona-v24",
+      "title": "Loona V24 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/funnyfuzzy-pet",
+      "title": "FUNNYFUZZY Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/funnyfuzzy-pet",
+      "title": "FUNNYFUZZY Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/pet-mat",
+      "title": "Pet mat Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/pet-mat",
+      "title": "Pet mat Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/hakuna-pets-door",
+      "title": "Hakuna Pets Black Glass Patio Pet Door Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/hakuna-pets-door",
+      "title": "Hakuna Pets Black Glass Patio Pet Door Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/asus-rog-cetra",
+      "title": "ASUS ROG Cetra Ear Earbuds Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/asus-rog-cetra",
+      "title": "ASUS ROG Cetra Ear Earbuds Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/poly-voyager-legend",
+      "title": "Poly Voyager Legend Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/poly-voyager-legend",
+      "title": "Poly Voyager Legend Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/bowers-wilkins-pi8",
+      "title": "Bowers & Wilkins Pi8 Wireless Earbuds Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/bowers-wilkins-pi8",
+      "title": "Bowers & Wilkins Pi8 Wireless Earbuds Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/edifier-neobuds",
+      "title": "Edifier NeoBuds Planar TWS LDAC Earbuds Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/edifier-neobuds",
+      "title": "Edifier NeoBuds Planar TWS LDAC Earbuds Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/sony-wf-1000xm6",
+      "title": "Sony WF-1000XM6 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/sony-wf-1000xm6",
+      "title": "Sony WF-1000XM6 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/sleep-headphones",
+      "title": "Sleep Headphones Headband Headphones Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/sleep-headphones",
+      "title": "Sleep Headphones Headband Headphones Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/tangem-ring",
+      "title": "TANGEM Ring Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/tangem-ring",
+      "title": "TANGEM Ring Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/vtech-sn5147",
+      "title": "VTech SN5147 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/vtech-sn5147",
+      "title": "VTech SN5147 Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/white-pearl-band",
+      "title": "White Pearl Smartwatch Band Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/white-pearl-band",
+      "title": "White Pearl Smartwatch Band Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/enamel-smart-ring",
+      "title": "Enamel Smart Ring Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/enamel-smart-ring",
+      "title": "Enamel Smart Ring Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/aleck-snow-helmet",
+      "title": "Aleck Snow Series Core Wireless Bluetooth Helmet Speakers Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/aleck-snow-helmet",
+      "title": "Aleck Snow Series Core Wireless Bluetooth Helmet Speakers Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/open-sunhat-bluetooth",
+      "title": "Open Type Sunhat with Bluetooth Speakers Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/open-sunhat-bluetooth",
+      "title": "Open Type Sunhat with Bluetooth Speakers Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/custom-beanie",
+      "title": "Custom Beanie for Men & Women Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/custom-beanie",
+      "title": "Custom Beanie for Men & Women Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/unisex-knitted-beanie",
+      "title": "Unisex Knitted Beanie Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/unisex-knitted-beanie",
+      "title": "Unisex Knitted Beanie Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/withmoons-hat",
+      "title": "WITHMOONS Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/withmoons-hat",
+      "title": "WITHMOONS Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/product/msa-hard-hat",
+      "title": "MSA 475395 Skullgard Cap Hard Hat Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/products/msa-hard-hat",
+      "title": "MSA 475395 Skullgard Cap Hard Hat Review & Fit | Wear Your Own Techs"
+    },
+    {
+      "path": "/guides/find-your-fit",
+      "title": "Find Your Fit: Watch, Ring, or Fitness Tracker? | Wear Your Own Techs"
+    },
+    {
+      "path": "/guides/smart-ring-vs-smartwatch",
+      "title": "Smart Ring vs. Smartwatch: Choose the Trade-Off | Wear Your Own Techs"
+    },
+    {
+      "path": "/guides/wearable-accessories",
+      "title": "Wearable Accessories: Compatibility, Charging, and Care | Wear Your Own Techs"
+    },
+    {
+      "path": "/comparisons/apple-watch-vs-garmin",
+      "title": "Apple Watch Series 10 vs. Garmin Venu 3 | Wear Your Own Techs"
+    },
+    {
+      "path": "/comparisons/smart-ring-vs-smartwatch",
+      "title": "Smart Ring vs. Smartwatch: Oura Ring 4 or Apple Watch Series 10 | Wear Your Own Techs"
+    },
+    {
+      "path": "/comparisons/sleep-tracking-watch-vs-ring",
+      "title": "Sleep Tracking: Garmin Venu 3 vs. Oura Ring 4 | Wear Your Own Techs"
+    },
+    {
+      "path": "/deals",
+      "title": "Deals"
+    },
+    {
+      "path": "/blog",
+      "title": "Blog"
+    },
+    {
+      "path": "/blog/:slug",
+      "title": "Blog article"
+    },
+    {
+      "path": "/category-landing/:id",
+      "title": "Category guide"
+    },
+    {
+      "path": "/seo-reviews",
+      "title": "Editorial archive"
+    },
+    {
+      "path": "/review/:slug",
+      "title": "Review article"
+    },
+    {
+      "path": "/social-media-manager",
+      "title": "Social media manager"
+    }
+  ]
+}

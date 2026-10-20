@@ -60,8 +60,11 @@ export function serveStatic(app: Express) {
 
   app.use(express.static(distPath));
 
-  // fall through to index.html if the file doesn't exist
-  app.use("*", (_req, res) => {
-    res.sendFile(path.resolve(distPath, "index.html"));
+  // Generated public pages are served above; retained client-only routes use their own shell.
+  app.use("*", (req, res) => {
+    const pathname = req.path.replace(/\/$/, "") || "/";
+    const legacy = /^\/(?:deals|blog(?:\/[^/]+)?|category-landing\/[^/]+|seo-reviews|review\/[^/]+|social-media-manager|legal)$/.test(pathname);
+    if (legacy) return res.sendFile(path.resolve(distPath, "legacy.html"));
+    return res.status(404).sendFile(path.resolve(distPath, "404.html"));
   });
 }
