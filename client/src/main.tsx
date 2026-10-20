@@ -1,3 +1,4 @@
+import { initializeExistingAnalytics } from "./consent-analytics";
 import { trpc } from "@/lib/trpc";
 import { UNAUTHED_ERR_MSG } from '@shared/const';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -73,3 +74,5 @@ const application = (
 
 if (root.dataset.prerendered === "true") hydrateRoot(root, application);
 else createRoot(root).render(application);
+
+initializeExistingAnalytics();

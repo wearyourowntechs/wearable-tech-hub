@@ -18,11 +18,13 @@ export default function CookieConsent() {
   const handleAccept = () => {
     try { localStorage.setItem("cookieConsent", "accepted"); } catch { /* Browser storage may be disabled. */ }
     setIsVisible(false);
+    window.dispatchEvent(new Event("wyot:consent-change"));
   };
 
   const handleReject = () => {
     try { localStorage.setItem("cookieConsent", "rejected"); } catch { /* Browser storage may be disabled. */ }
     setIsVisible(false);
+    window.dispatchEvent(new Event("wyot:consent-change"));
   };
 
   return (
@@ -43,7 +45,7 @@ export default function CookieConsent() {
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold mb-2">Cookie Preferences</h3>
                     <p className="text-sm text-muted-foreground">
-                      We use cookies to enhance your experience, analyze traffic, and enable personalized advertising. By continuing to browse, you consent to our use of cookies.{" "}
+                      Choose whether to allow the site’s existing analytics and Pinterest tag. Non-essential tracking loads only after you select Accept All.{" "}
                       <button
                         onClick={() => setShowDetails(true)}
                         className="text-primary hover:underline font-medium"
