@@ -1,1 +1,8 @@
-/* /index.html 200
+/deals /legacy.html 200
+/blog /legacy.html 200
+/blog/:slug /legacy.html 200
+/category-landing/:id /legacy.html 200
+/seo-reviews /legacy.html 200
+/review/:slug /legacy.html 200
+/social-media-manager /legacy.html 200
+/legal /legacy.html 200

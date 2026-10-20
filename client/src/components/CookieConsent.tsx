@@ -10,20 +10,21 @@ export default function CookieConsent() {
 
   useEffect(() => {
     // Check if user has already accepted cookies
-    const cookieConsent = localStorage.getItem("cookieConsent");
-    if (!cookieConsent) {
-      setIsVisible(true);
-    }
+    try {
+      if (!localStorage.getItem("cookieConsent")) setIsVisible(true);
+    } catch { setIsVisible(true); }
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem("cookieConsent", "accepted");
+    try { localStorage.setItem("cookieConsent", "accepted"); } catch { /* Browser storage may be disabled. */ }
     setIsVisible(false);
+    window.dispatchEvent(new Event("wyot:consent-change"));
   };
 
   const handleReject = () => {
-    localStorage.setItem("cookieConsent", "rejected");
+    try { localStorage.setItem("cookieConsent", "rejected"); } catch { /* Browser storage may be disabled. */ }
     setIsVisible(false);
+    window.dispatchEvent(new Event("wyot:consent-change"));
   };
 
   return (
@@ -34,7 +35,7 @@ export default function CookieConsent() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-0 left-0 right-0 z-50 p-4 sm:p-6"
+          className="fixed bottom-0 left-0 right-0 z-[70] p-4 sm:p-6"
         >
           <div className="max-w-4xl mx-auto bg-card border border-border rounded-lg shadow-lg">
             {/* Compact View */}
@@ -42,9 +43,9 @@ export default function CookieConsent() {
               <div className="p-4 sm:p-6">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold mb-2">🍪 Cookie Preferences</h3>
+                    <h3 className="text-lg font-semibold mb-2">Cookie Preferences</h3>
                     <p className="text-sm text-muted-foreground">
-                      We use cookies to enhance your experience, analyze traffic, and enable personalized advertising. By continuing to browse, you consent to our use of cookies.{" "}
+                      Choose whether to allow the site’s existing analytics and Pinterest tag. Non-essential tracking loads only after you select Accept All.{" "}
                       <button
                         onClick={() => setShowDetails(true)}
                         className="text-primary hover:underline font-medium"

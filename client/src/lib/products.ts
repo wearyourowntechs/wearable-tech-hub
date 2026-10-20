@@ -1,3 +1,4 @@
+import { amazonLink } from "../../../shared/affiliate";
 // Product data with real Amazon.ca images
 // Auto-generated from CSV with extracted product images and affiliate links
 
@@ -28,7 +29,7 @@ export interface Category {
 
 const AFFILIATE_TAG = "weyoowte-20";
 
-export const products: Product[] = [
+const originalCatalog: Product[] = [
   // Smart Watches
   {
     id: "google-pixel-watch-4",
@@ -988,3 +989,5 @@ export function getTopRatedProducts(limit?: number): Product[] {
 export function getProductById(id: string): Product | undefined {
   return products.find(p => p.id === id);
 }
+
+export const products: Product[] = originalCatalog.map((product) => ({ ...product, amazonUrl: amazonLink(product.name) }));

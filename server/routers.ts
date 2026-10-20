@@ -1,3 +1,4 @@
+import { withAffiliateTag } from "../shared/affiliate";
 import { z } from "zod";
 import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
@@ -100,16 +101,12 @@ export const appRouter = router({
         })
       )
       .mutation(async ({ input }) => {
-        const AFFILIATE_ID = "weyoowte0d-20";
         const generatedPost = await generatePostFromUrl(
           input.productUrl,
           input.platforms
         );
 
-        let affiliateLink = generatedPost.amazonLink;
-        if (affiliateLink && !affiliateLink.includes(AFFILIATE_ID)) {
-          affiliateLink = `${affiliateLink}?tag=${AFFILIATE_ID}`;
-        }
+        const affiliateLink = withAffiliateTag(generatedPost.amazonLink || "", "wearable technology");
 
         // Create the post in the store
         const post = postStore.addPost({
